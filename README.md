@@ -7,6 +7,13 @@ Our project name is called the 'Junior's Bakery' and this will be the website fo
 
 
 
+
+# Features
+
+# Existing Features
+
+
+
 # Features To Implement
 - Feature 1: There will be a login page for users to input their details before visiting our website. This is because we want to display the number of points accumulated from their own previous purchases on the top left corner of the website 
 
@@ -25,6 +32,8 @@ Our project name is called the 'Junior's Bakery' and this will be the website fo
 - Extra feature: A checkout page with input boxes and a successful message to confirm their orders have been added
 
 
+
+
 # Technologies that will be used
 - Feature 1: HTML and CSS to code a simple login page (some javascript for input validation), loading page using LottieFiles
 
@@ -40,4 +49,30 @@ Our project name is called the 'Junior's Bakery' and this will be the website fo
 
 - Feature 7: HTML, CSS, Javascript for contact page 
 
+
+# Testing
+
+
+
+
+
+
+# Credits
+
+# Content
+- The text for section Y was copied from...
+
+
+
+
+
+# Media
+- The photos used in this site were obtained from...
+
+
+
+
+
+# Acknowledgements
+- We received inspiration for this project from...
 
