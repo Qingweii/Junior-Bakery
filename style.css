@@ -72,3 +72,25 @@ input[type='password']{
     left: 35%;
     top: 15%;
 }
+
+/* Home page */
+#home_page .header_bar{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.navigation ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.navigation .bar a{
+    text-decoration: none;
+    color: black;
+}
