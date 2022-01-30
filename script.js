@@ -3,5 +3,5 @@ const duration = setTimeout(showHome,3000);
 
 function showHome(){
     document.getElementById('loading').style.display = 'none';
-    document.getElementById('home_page').style.display = 'block';
+    document.getElementById('about_us_page').style.display = 'block';
  }
