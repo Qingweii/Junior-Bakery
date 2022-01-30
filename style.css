@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Spectral SC', serif;
 }
 
 /* Login page */
@@ -10,13 +10,13 @@
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .username_container, .email_container, .password_container, .buttons{
     padding: 0 50px;
     padding-top: 30px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .textarea{
@@ -29,15 +29,15 @@
 }
 
 input[type='text']{
-    font-size: 18px;
+    font-size: 17px;
 }
 
 input[type='email']{
-    font-size: 18px;
+    font-size: 17px;
 }
 
 input[type='password']{
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .sign_in_button{
@@ -73,12 +73,23 @@ input[type='password']{
     top: 15%;
 }
 
+
+
 /* Home page */
 #home_page .header_bar{
     padding-top: 30px;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
+    cursor: pointer;
+}
+
+.header_bar .point:hover{
+    color: #684545;
+}
+
+.header_bar .cart:hover{
+    color: #684545;
 }
 
 .navigation ul{
@@ -88,9 +99,31 @@ input[type='password']{
     flex-wrap: nowrap;
     list-style-type: none;
     font-size: 18px;
+    font-weight: bold;
+    
 }
 
 .navigation .bar a{
     text-decoration: none;
     color: black;
+}
+
+.navigation .bar a:hover{
+    color: #684545;
+}
+
+.moto h1{
+    text-align: center;
+    padding-top: 13%;
+    font-weight: bolder;
+}
+
+.moto h4{
+    text-align: center;
+    padding-top: 10%;
+}
+
+.moto .arrow_down{
+    display: flex;
+    justify-content: center;
 }
