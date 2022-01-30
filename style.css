@@ -126,4 +126,9 @@ input[type='password']{
 .moto .arrow_down{
     display: flex;
     justify-content: center;
+    cursor: pointer;
+}
+
+.moto .arrow_down:hover{
+    color: #684545;
 }
