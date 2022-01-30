@@ -67,3 +67,8 @@ input[type='password']{
 
 
 /* Loading page */
+#loading{
+    position: absolute;
+    left: 35%;
+    top: 15%;
+}

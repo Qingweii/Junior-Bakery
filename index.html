@@ -10,37 +10,33 @@
   <body>
     
     <!-- Sign in Page -->
-    <div class = 'login_page'>
+    <div class = 'login_page' id = 'login'>
       <h1>Welcome to Junior's Bakery</h1>
 
-      <form method='post'>
+      <form name = 'information' method='post' action = 'loading.html'>
         
         <div class='username_container'>
           <label class='label'>Name</label>
-          <input type='text' class='textarea' required>
+          <input type='text' class='textarea' minlength = '3' required>
         </div>
 
         <div class='email_container'>
           <label class='label'>Email Address</label>
-          <input type='email' class='textarea' required>
+          <input type='email' class='textarea' minlength = '3' required>
         </div>
 
         <div class='password_container'>
           <label class='label'>Password</label>
-          <input type='password' class='textarea' required>
+          <input type='password' class='textarea' minlength = '5' required>
         </div>
 
-        <div class='buttons'>
-          <button type='submit' class='sign_in_button' onclick='loadingScreen()'>Sign In</button>
+        <div class='buttons' >
+          <button type='submit' class='sign_in_button'>Sign In</button>
           <label class='remember'><input type='checkbox' name='remember'>Remember me</label>
         </div>
 
       </form>
     </div>
-
-
-
-
 
     <script src="script.js"></script>
   </body>
