@@ -4,6 +4,10 @@
     font-family: 'Spectral SC', serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Login page */
 .login_page{
     top: 50%;
@@ -82,15 +86,24 @@ input[type='password']{
     justify-content: space-around;
     flex-wrap: nowrap;
     cursor: pointer;
+
 }
 
-.header_bar .point:hover{
+.header{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 226, 228);
+}
+
+.header .point:hover{
     color: #684545;
 }
 
-.header_bar .cart:hover{
+.header .cart:hover{
     color: #684545;
 }
+
 
 .navigation ul{
     display: flex;
@@ -114,7 +127,7 @@ input[type='password']{
 
 .moto h1{
     text-align: center;
-    padding-top: 13%;
+    padding-top: 25%;
     font-weight: bolder;
 }
 
@@ -137,3 +150,21 @@ input[type='password']{
 
 
 /* Intro page */
+#intro_page{
+    padding-top: 130px;
+    padding-left: 60px;
+}
+
+.short_intro{
+    margin-left: 600px;
+    margin-right: 100px;
+    margin-top: 250px;
+    position: absolute;
+}
+
+#intro_page img{
+    width: 500px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 20px;
+}
