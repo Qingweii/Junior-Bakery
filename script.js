@@ -7,6 +7,12 @@ function showHome(){
  };
 
 
+ // Popup message at navigation bar
+function popupFunction(){
+    var pop = document.getElementById('popup');
+    pop.classList.toggle('show');
+ }
+
 
 // Footer section (birthday submission)
 
