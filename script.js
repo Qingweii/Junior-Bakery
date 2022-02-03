@@ -8,7 +8,7 @@ function showHome(){
 
 // Footer section (birthday submission)
 
-function bday(event){
+function bday(){
     alert('Your birthday is on its way, We\'ll be counting down to your special day ;)');
-    event.preventDefault();
 };
+
