@@ -138,6 +138,7 @@ input[type='password']{
 
 .moto h1{
     text-align: center;
+    font-size: 30px;
     padding-top: 25%;
     font-weight: bolder;
     color: rgb(255, 174, 0);
@@ -376,9 +377,17 @@ input[type='date']{
 }
 
 .cost{
-    padding-top: 300px;
+    padding-top: 320px;
     font-size: 15px;
 }
+
+
+
+
+/* Preview items page (add to cart) */
+
+
+
 
 
 
