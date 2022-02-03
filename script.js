@@ -1,5 +1,5 @@
 // Loading page to Home page
-const duration = setTimeout(showHome,3000);
+const duration = setTimeout(showHome,2000);
 
 function showHome(){
     document.getElementById('loading').style.display = 'none';

@@ -90,7 +90,7 @@ input[type='password']{
 }
 
 
-#home_page .header_bar{
+.header_bar{
     padding-top: 30px;
     display: flex;
     justify-content: space-around;
