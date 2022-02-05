@@ -22,5 +22,41 @@ function bday(){
 
 
 
-//
+//Plus and Minus button for quantity value (Add to cart page)
+var minusbtn = document.getElementById('minus');
+var plusbtn = document.getElementById('plus');
+var quantity = document.getElementById('number');
+
+number = 0;  // Number value
+min = 0;    // Minimum value
+max = 10;  // Maximum value
+
+minusbtn.onclick = function(){
+    if (number > min){
+        number = number - 1;
+        quantity.innerText = number;  // Display value of the number
+    }
+
+    if (number == min){
+        quantity.style.color = 'red';
+        setTimeout(function(){quantity.style.color='black'},500)
+    } else{
+        quantity.style.color = 'black';
+    }
+}
+
+plusbtn.onclick = function(){
+    if (number < max){
+        number = number + 1;
+        quantity.innerText = number;  // Display value of the number
+    }
+
+    if (number == max){
+        quantity.style.color = 'red';
+        setTimeout(function(){quantity.style.color='black'},500)
+    } else{
+        quantity.style.color = 'black';
+    }
+}
+
 

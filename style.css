@@ -133,6 +133,10 @@ input[type='password']{
     background-color: rgb(230, 204, 176);
 }
 
+.header .cart{
+    color: black;
+}
+
 .header .point:hover{
     color: #684545;
 }
@@ -411,6 +415,58 @@ input[type='date']{
 
 
 /* Preview items page (add to cart) */
+.info_pie img{
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+    padding-top: 200px;
+    padding-left: 50px;
+}
+
+.information{
+    padding-top: 380px;
+    padding-left: 650px;
+    position: absolute;
+}
+
+#name_pastry{
+    font-size: 20px;
+}
+
+#price_pastry{
+    padding-left: 400px;
+    font-size: 18px;
+}
+
+#description_pastry{
+    padding-top: 80px;
+    padding-right: 40px;
+}
+
+#quantity_pastry{
+    padding-top: 210px;
+}
+
+#minus, #plus{
+    width: 35px;
+    height: 35px;
+}
+
+#number{
+    padding: 20px 20px;
+}
+
+#cart_pastry{
+    padding-top: 200px;
+    padding-left: 250px;
+}
+
+#add_to_cart_button{
+    width: 300px;
+    height: 50px;
+}
+
+
 
 
 
