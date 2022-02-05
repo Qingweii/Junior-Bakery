@@ -444,12 +444,12 @@ input[type='date']{
 }
 
 #quantity_pastry{
-    padding-top: 210px;
+    padding-top: 200px;
 }
 
 #minus, #plus{
     width: 35px;
-    height: 35px;
+    height: 50px;
 }
 
 #number{
@@ -458,12 +458,13 @@ input[type='date']{
 
 #cart_pastry{
     padding-top: 200px;
-    padding-left: 250px;
+    padding-left: 200px;
 }
 
 #add_to_cart_button{
     width: 300px;
     height: 50px;
+    font-size: 17px;
 }
 
 

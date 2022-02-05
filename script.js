@@ -27,8 +27,8 @@ var minusbtn = document.getElementById('minus');
 var plusbtn = document.getElementById('plus');
 var quantity = document.getElementById('number');
 
-number = 0;  // Number value
-min = 0;    // Minimum value
+number = 1;  // Number value
+min = 1;    // Minimum value
 max = 10;  // Maximum value
 
 minusbtn.onclick = function(){
