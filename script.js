@@ -43,7 +43,7 @@ minusbtn.onclick = function(){
     } else{
         quantity.style.color = 'black';
     }
-}
+};
 
 plusbtn.onclick = function(){
     if (number < max){
@@ -57,6 +57,55 @@ plusbtn.onclick = function(){
     } else{
         quantity.style.color = 'black';
     }
-}
+};
 
+
+
+// Add to cart page
+$(document).ready(function(){
+    
+    const APIKEY = '61fe62826a791555010217e9';
+
+    $('#add_to_cart_button').on('click', function(e){
+
+        e.preventDefault();
+
+
+        // Retrieve the data from selected pastry
+        let pastryName = document.getElementById('name_pastry').innerText;
+        let pastryPrice = document.getElementById('price_pastry').innerText;
+        let pastryNum = document.getElementById('number').innerText;
+        
+
+        // Get pastry info when user click add to cart
+        let jsondata = {
+            'name': pastryName,
+            'price': pastryPrice,
+            'quantity': pastryNum,
+        };
+
+        // Create AJAX settings
+
+        var settings = {
+            'async': true,
+            "crossDomain": true,
+            "url": 'https://pastries-5f62.restdb.io/rest/pastry',
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json",
+                "x-apikey": '61fe62826a791555010217e9',
+                "cache-control": "no-cache",
+            },
+            "processData": false,
+            "data": JSON.stringify(jsondata),
+        }
+
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+
+        });
+        
+    });
+});
 
