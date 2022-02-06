@@ -480,33 +480,54 @@ input[type='date']{
     padding-left: 20px;
 }
 
-#review{
+#reviews{
     padding-top: 200px;
     padding-bottom: 200px;
 }
 
-#review h2{
+#reviews h2{
     text-align: center;
 }
 
 /* Review box */
 .review{
     width: 400px;
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 30px;
-    padding-left: 20px;
+    padding-left: 30px;
     background-color: #ecd6d6;
+    border: 2px solid burlywood;
 }
 
 .review .love{
-    padding-top: 50px
+    padding-top: 40px
 }
 
+.review h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
+.review h4{
+    padding-top: 30px;
+}
 
+.review p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
+.reviewbox1{
+    padding-top: 10px;
+}
 
+.reviewbox2{
+    padding-top: 10px;
+}
 
+.reviewbox3{
+    padding-top: 10px;
+}
 
 
 
