@@ -102,7 +102,10 @@ $(document).ready(function(){
 
         // Send ajax request to restDB 
         $.ajax(settings).done(function (response) {
-            console.log(response); // print out the restdb storage
+            console.log(response); // print out the selected pastry data
+            
+            unique = `${response._id}`
+
             getPastry();
         });
 
@@ -123,21 +126,28 @@ $(document).ready(function(){
             }
 
             $.ajax(settings).done(function (response) {
-                //console.log(response);
+                console.log(response);
 
                 let order = '';
 
                 for (var i = 0; i <response.length; i ++){
 
-                    order = `${order}<tr><td>${response[i].name}</td><td>${response[i].price}</td><td>${response[i].quantity}</td></tr>`
+                    if (unique == `${response[i]._id}`){ //to identify the selected quantity despite so many data
 
+                        order = `${order}<tr id='${response[i]._id}'><td>${response[i].name}</td><td>${response[i].price}</td><td>${response[i].quantity}</td></tr>`
+                    }
                 }
 
-                //console.log(order)
+                //console.log(order);
+                sessionStorage.setItem('list',order)
+                //console.log(sessionStorage)
+                
             });
 
+            //console.log(sessionStorage)
         }
         
     });
+
 
 });
