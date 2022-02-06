@@ -69,13 +69,13 @@ $(document).ready(function(){
     $('#add_to_cart_button').on('click', function(e){
 
         e.preventDefault();
-
+        
 
         // Retrieve the data from selected pastry
         let pastryName = document.getElementById('name_pastry').innerText;
         let pastryPrice = document.getElementById('price_pastry').innerText;
         let pastryNum = document.getElementById('number').innerText;
-        
+
 
         // Get pastry info when user click add to cart
         let jsondata = {
@@ -100,12 +100,44 @@ $(document).ready(function(){
             "data": JSON.stringify(jsondata),
         }
 
-
+        // Send ajax request to restDB 
         $.ajax(settings).done(function (response) {
-            console.log(response);
-
+            console.log(response); // print out the restdb storage
+            getPastry();
         });
+
+
+        // to retrieve the data from the database
+        function getPastry(limit = 10, all = true){
+
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://pastries-5f62.restdb.io/rest/pastry",
+                "method": "GET",
+                "headers": {
+                "content-type": "application/json",
+                "x-apikey": "61fe62826a791555010217e9",
+                "cache-control": "no-cache"
+                },
+            }
+
+            $.ajax(settings).done(function (response) {
+                //console.log(response);
+
+                let order = '';
+
+                for (var i = 0; i <response.length; i ++){
+
+                    order = `${order}<tr><td>${response[i].name}</td><td>${response[i].price}</td><td>${response[i].quantity}</td></tr>`
+
+                }
+
+                //console.log(order)
+            });
+
+        }
         
     });
-});
 
+});
