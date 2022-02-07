@@ -60,7 +60,6 @@ plusbtn.onclick = function(){
 };
 
 
-
 // Add to cart page
 $(document).ready(function(){
     
@@ -75,17 +74,18 @@ $(document).ready(function(){
         let pastryName = document.getElementById('name_pastry').innerText;
         let pastryPrice = document.getElementById('price_pastry').innerText;
         let pastryNum = document.getElementById('number').innerText;
+        let pastryImg = document.getElementById('image').getAttribute('src');
 
-
+        
         // Get pastry info when user click add to cart
         let jsondata = {
+            'image': pastryImg,
             'name': pastryName,
             'price': pastryPrice,
             'quantity': pastryNum,
         };
 
         // Create AJAX settings
-
         var settings = {
             'async': true,
             "crossDomain": true,
@@ -103,12 +103,9 @@ $(document).ready(function(){
         // Send ajax request to restDB 
         $.ajax(settings).done(function (response) {
             console.log(response); // print out the selected pastry data
-            
-            unique = `${response._id}`
 
         });
-        
-        
+
     });
 
 

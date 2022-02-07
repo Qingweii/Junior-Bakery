@@ -21,11 +21,11 @@ $(document).ready(function(){
 
         for (var i = 0; i <response.length; i ++){
 
-            order = `${order}<tr id='${response[i]._id}'><td>${response[i].name}</td><td>${response[i].price}</td><td>${response[i].quantity}</td></tr>`
+            order = `${order}<tr id='${response[i]._id}'><td><img src = '${response[i].image}' width = '80' height = '100'></td><td>${response[i].name}</td><td>${response[i].price}</td><td>${response[i].quantity}</td></tr>`
         }
 
         console.log(order);
-        $('#order_list tbody').html(order)
+        $('#order_list tbody').html(order);
             
     });
 
