@@ -106,46 +106,8 @@ $(document).ready(function(){
             
             unique = `${response._id}`
 
-            getPastry();
         });
-
-
-        // to retrieve the data from the database
-        function getPastry(limit = 10, all = true){
-
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://pastries-5f62.restdb.io/rest/pastry",
-                "method": "GET",
-                "headers": {
-                "content-type": "application/json",
-                "x-apikey": "61fe62826a791555010217e9",
-                "cache-control": "no-cache"
-                },
-            }
-
-            $.ajax(settings).done(function (response) {
-                console.log(response);
-
-                let order = '';
-
-                for (var i = 0; i <response.length; i ++){
-
-                    if (unique == `${response[i]._id}`){ //to identify the selected quantity despite so many data
-
-                        order = `${order}<tr id='${response[i]._id}'><td>${response[i].name}</td><td>${response[i].price}</td><td>${response[i].quantity}</td></tr>`
-                    }
-                }
-
-                //console.log(order);
-                sessionStorage.setItem('list',order)
-                //console.log(sessionStorage)
-                
-            });
-
-            //console.log(sessionStorage)
-        }
+        
         
     });
 
