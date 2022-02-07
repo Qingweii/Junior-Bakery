@@ -423,6 +423,7 @@ input[type='date']{
     padding-left: 50px;
 }
 
+/* Carousel starts here */
 .image, .image--hidden{
     display: none;
 }
@@ -464,7 +465,7 @@ input[type='date']{
     margin-right: 15px;
 }
 
-
+/* Carousel ends here */
 
 
 
@@ -588,7 +589,6 @@ input[type='date']{
 .orders h2{
     text-align: center;
 }
-
 
 
 
