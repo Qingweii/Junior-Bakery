@@ -60,6 +60,58 @@ plusbtn.onclick = function(){
 };
 
 
+
+
+// Carousel (Viewing Pastry)
+let slidePosition = 0;
+const slide = document.getElementsByClassName('image');
+const totalSlide = slide.length;
+
+document.getElementById('next').addEventListener('click',function(){
+    movetoNextSlide();
+});
+
+document.getElementById('prev').addEventListener('click',function(){
+    movetoPrevSlide();
+});
+
+function updateSlidePosition(){
+    
+    for (let move of slide){
+        move.classList.remove('image--visible');
+        move.classList.add('image--hidden');
+    }
+
+    slide[slidePosition].classList.add('image--visible');
+}
+
+
+function movetoNextSlide() {
+
+    if (slidePosition === totalSlide -1){
+        slidePosition = 0;
+    } else{
+        slidePosition++;
+    }
+
+    updateSlidePosition();
+};
+
+function movetoPrevSlide(){
+
+    if (slidePosition === 0){
+        slidePosition = totalSlide -1;
+    } else{
+        slidePosition--;
+    }
+
+    updateSlidePosition();
+};
+
+
+
+
+
 // Add to cart page
 $(document).ready(function(){
     
@@ -69,14 +121,13 @@ $(document).ready(function(){
 
         e.preventDefault();
         
-
         // Retrieve the data from selected pastry
         let pastryName = document.getElementById('name_pastry').innerText;
         let pastryPrice = document.getElementById('price_pastry').innerText;
         let pastryNum = document.getElementById('number').innerText;
         let pastryImg = document.getElementById('image').getAttribute('src');
 
-        
+
         // Get pastry info when user click add to cart
         let jsondata = {
             'image': pastryImg,
@@ -104,6 +155,7 @@ $(document).ready(function(){
         $.ajax(settings).done(function (response) {
             console.log(response); // print out the selected pastry data
 
+            alert('Successfully added to cart!')
         });
 
     });

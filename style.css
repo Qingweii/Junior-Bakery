@@ -415,13 +415,62 @@ input[type='date']{
 
 
 /* Preview items page (add to cart) */
-.info_pie img{
+.info_pie .image img{
     width: 500px;
     height: 600px;
     object-fit: cover;
     padding-top: 200px;
     padding-left: 50px;
 }
+
+.image, .image--hidden{
+    display: none;
+}
+
+.image--visible{
+    display: block;
+}
+
+.carousel_actions{
+    display: flex;
+    justify-content: space-between;
+    top: 70%;
+    position: absolute;
+    width: 48%;
+}
+
+.carousel_actions button{
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 30px;
+    height: 40px;
+    color: white;
+    background-color: #000000;
+    transition: 0.2s ease-in;
+}
+
+.carousel_actions button:hover{
+    background-color: #616161;
+}
+
+.carousel_actions button#prev{
+    margin-left: 15px;
+}
+
+.carousel_actions button#next{
+    margin-right: 15px;
+}
+
+
+
+
+
+
+
+
 
 .information{
     padding-top: 330px;
