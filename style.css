@@ -404,6 +404,7 @@ input[type='date']{
 .pastry:hover img.image-hover{
     opacity:1;
     cursor: pointer;
+    transition: all ease 0.5s;
 }
 
 .cost{
@@ -466,10 +467,6 @@ input[type='date']{
 }
 
 /* Carousel ends here */
-
-
-
-
 
 
 
@@ -539,15 +536,29 @@ input[type='date']{
     text-align: center;
 }
 
+
 /* Review box */
+.container_r{
+    position: relative;
+}
+
+.reviewbox{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .review{
-    width: 400px;
+    width: 300px;
     padding-top: 50px;
     padding-bottom: 30px;
     padding-left: 30px;
+    padding-right: 30px;
     background-color: #ecd6d6;
     border: 2px solid burlywood;
 }
+
 
 .review .love{
     padding-top: 40px
@@ -563,21 +574,9 @@ input[type='date']{
 }
 
 .review p{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: 100%;
 }
 
-.reviewbox1{
-    padding-top: 10px;
-}
-
-.reviewbox2{
-    padding-top: 10px;
-}
-
-.reviewbox3{
-    padding-top: 10px;
-}
 
 
 

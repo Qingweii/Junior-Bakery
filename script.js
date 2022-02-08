@@ -111,7 +111,6 @@ function movetoPrevSlide(){
 
 
 
-
 // Add to cart page
 $(document).ready(function(){
     
