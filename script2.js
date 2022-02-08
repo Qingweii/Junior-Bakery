@@ -29,9 +29,9 @@ $(document).ready(function(){
 
         for (var i = 0; i <response.length; i ++){
 
-            order = `${order}<tr id='${response[i]._id}' cost='${response[i].price}'><td><img src = '${response[i].image}' width = '100' height = '150'></td><td>${response[i].name}<br>$${response[i].orig}</td><td>$${response[i].price}</td>
+            order = `${order}<tr id='${response[i]._id}'><td><img src = '${response[i].image}' width = '100' height = '150'></td><td>${response[i].name}<br>$${response[i].orig}</td><td>$${response[i].price}</td>
             <td id='quantity'><button id="minus_q">-</button><div id = 'quantity_element'>${response[i].quantity}</div><button id="plus_q">+</button></td>
-            <td><a href='#delete-container' class='delete' data-id='${response[i]._id}'><i class="fas fa-times fa-2x" style='color: red;'></i></a></td></tr>`;
+            <td><a href='#delete-container' class='delete' data-id='${response[i]._id}' data-cost='${response[i].price}'><i class="fas fa-times fa-2x" style='color: red;'></i></a></td></tr>`;
 
             money = money + Number(`${response[i].price}`); // Add the total price for pastry
         }
@@ -46,9 +46,12 @@ $(document).ready(function(){
     $('#order_list tbody').on('click', '.delete', function () {
 
         $(this).closest('tr').remove(); // Remove immediately after button click 
+
         let pastryid = $(this).data('id');
-        let pastrycost = $(this).data('cost');
-        console.log(pastrycost);
+        let pastrycosts = $(this).data('cost'); // To get the cost that is being deleted
+
+        var newest_price = Number($('.cart-total-price').html()) - Number(pastrycosts);
+        $('.cart-total-price').html(newest_price); // To print out the latest cost after deletion
 
         deleteinfo(pastryid);
     });
