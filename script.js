@@ -122,10 +122,11 @@ $(document).ready(function(){
         
         // Retrieve the data from selected pastry
         let pastryName = document.getElementById('name_pastry').innerText;
-        let pastryPrice = document.getElementById('price_pastry').innerText;
+        var cost = document.getElementById('price_pastry').innerText.replace('$','');
         let pastryNum = document.getElementById('number').innerText;
         let pastryImg = document.getElementById('image').getAttribute('src');
-
+        let pastryPrice = Number(cost) * Number(pastryNum);
+        let origPrice = document.getElementById('price_pastry').innerText.replace('$','');
 
         // Get pastry info when user click add to cart
         let jsondata = {
@@ -133,6 +134,7 @@ $(document).ready(function(){
             'name': pastryName,
             'price': pastryPrice,
             'quantity': pastryNum,
+            'orig': origPrice,
         };
 
         // Create AJAX settings

@@ -583,19 +583,39 @@ input[type='date']{
 /* Order cart page */
 .orders{
     padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .orders h2{
     text-align: center;
 }
 
+#minus_q, #plus_q{
+    border: none;
+    width: 15px;
+    height: 20px;
+}
 
+#quantity_element{
+    padding-left:10px;
+    padding-right: 10px;
+}
 
+#quantity{
+    display: flex;
+    flex-direction: row;
+}
 
+#cart-total{
+    padding-top: 50px;
+    display:flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
 
-
-
-
+#cart-total strong{
+    padding-right: 50px;
+}
 
 
 
