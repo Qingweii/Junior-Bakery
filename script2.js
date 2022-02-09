@@ -31,8 +31,8 @@ $(document).ready(function(){
 
         for (var i = 0; i <response.length; i ++){
 
-            order = `${order}<tr id='${response[i]._id}'><td><img src = '${response[i].image}' width = '140' height = '150' style='object-fit: cover;'></td><td>${response[i].name}<br>$${response[i].orig}</td><td>$${response[i].price}</td>
-            <td id='quantity'><button id="minus_q" data-quantity='${response[i].quantity}' data-id='${response[i]._id}'>-</button><div id = 'quantity_element'>${response[i].quantity}</div><button id="plus_q" data-quantity='${response[i].quantity}' data-id='${response[i]._id}'>+</button></td>
+            order = `${order}<tr id='${response[i]._id}'><td><img src = '${response[i].image}' width = '140' height = '150' style='object-fit: cover;'></td><td>${response[i].name}<br>$${response[i].orig}</td><td id='cost'>$${response[i].price}</td>
+            <td id='quantity'><button id="minus_q" data-quantity='${response[i].quantity}' data-id='${response[i]._id}' data-orig='${response[i].orig}'>-</button><div id = 'quantity_element'>${response[i].quantity}</div><button id="plus_q" data-quantity='${response[i].quantity}' data-id='${response[i]._id}' data-orig='${response[i].orig}'>+</button></td>
             <td><a href='#delete-container' class='delete' data-id='${response[i]._id}' data-cost='${response[i].price}'><i class="fas fa-times fa-2x" style='color: red;'></i></a></td></tr>`;
 
             money = money + Number(`${response[i].price}`); // Add the total price for pastry
@@ -43,11 +43,15 @@ $(document).ready(function(){
     });
 
 
+
+
     // When minus button is clicked to update quantity
     $('#order_list tbody').on('click', '#minus_q', function(){
 
         let quantity = $(this).data('quantity');  // to identify the quantity for that selected pastry
         let q_id = $(this).data('id');  // to identify the ID for which pastry is selected 
+        let pastrycosts = $(this).data('orig'); // To get the cost 
+
         var quantity_element = document.getElementById('order_list');
         var unique = quantity_element.getElementsByTagName('tr');
 
@@ -59,14 +63,26 @@ $(document).ready(function(){
                 if(quantity > min){
                     quantity = quantity - 1;
                     var x = unique[i].querySelector('#quantity_element');
+                    var y = unique[i].querySelector('#cost');
                     x.innerText = quantity;
+
+                } else{    // to show that it has reach the Minimum
+                    var numm = unique[i].querySelector('#quantity_element');
+                    numm.style.color = 'red';
+                    setTimeout(function(){numm.style.color='black'},500)
                 }
             }
         }
 
+        newest_cost = Number(pastrycosts) * Number(quantity);
+        y.innerText = '$' + newest_cost;
+
+
         //console.log(quantity)
-        updatePastry(q_id, quantity)
+        updatePastry(q_id, newest_cost, quantity)
     });
+
+
 
 
     // When plus button is clicked to update quantity
@@ -74,10 +90,12 @@ $(document).ready(function(){
 
         let quantity = $(this).data('quantity');  // to identify the quantity for that selected pastry
         let q_id = $(this).data('id');  // to identify the ID for which pastry is selected 
+        let pastrycosts = $(this).data('orig'); // To get the original cost
+
         var quantity_element = document.getElementById('order_list');
         var unique = quantity_element.getElementsByTagName('tr');
 
-        max = 10;
+        max = 10
 
         for (var i = 0; i < unique.length; i ++){
 
@@ -85,21 +103,37 @@ $(document).ready(function(){
                 if(quantity < max){
                     quantity = quantity + 1;
                     var x = unique[i].querySelector('#quantity_element');
+                    var y = unique[i].querySelector('#cost');
                     x.innerText = quantity;
+
+                } else{    // to show that it has reach the Maximum
+                    var numm = unique[i].querySelector('#quantity_element');
+                    numm.style.color = 'red';
+                    setTimeout(function(){numm.style.color='black'},500)
                 }
             }
         }
 
+        newest_cost = Number(pastrycosts) * Number(quantity);
+        y.innerText = '$' + newest_cost;
+
+        var difference = Number(newest_cost) - Number($('.cart-total-price').html()) 
+        var add = Number($('.cart-total-price').html()) + Number(difference)
+
+        $('.cart-total-price').html(add); // To print out the latest cost
+
         //console.log(quantity)
-        updatePastry(q_id, quantity)
+        //updatePastry(q_id, newest_cost, quantity)
     });
 
 
 
+
     // Update info of pastry after quantity change
-    function updatePastry(id, pastryNum){
+    function updatePastry(id, pastryPrice, pastryNum){
 
         var jsondata = {
+            'price': pastryPrice,
             'quantity': pastryNum,
         };
 
@@ -118,7 +152,8 @@ $(document).ready(function(){
         }
 
         $.ajax(settings).done(function (response) {
-        console.log(response);
+            console.log(response);
+            alert('Updated Successfully!')
 
         });
     

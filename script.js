@@ -39,7 +39,7 @@ minusbtn.onclick = function(){
 
     if (number == min){
         quantity.style.color = 'red';
-        setTimeout(function(){quantity.style.color='black'},500)
+        setTimeout(function(){quantity.style.color='black'},500);
     } else{
         quantity.style.color = 'black';
     }
