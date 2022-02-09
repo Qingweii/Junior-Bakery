@@ -29,7 +29,7 @@ $(document).ready(function(){
 
         for (var i = 0; i <response.length; i ++){
 
-            order = `${order}<tr id='${response[i]._id}'><td><img src = '${response[i].image}' width = '100' height = '150'></td><td>${response[i].name}<br>$${response[i].orig}</td><td>$${response[i].price}</td>
+            order = `${order}<tr id='${response[i]._id}'><td><img src = '${response[i].image}' width = '140' height = '150' style='object-fit: cover;'></td><td>${response[i].name}<br>$${response[i].orig}</td><td>$${response[i].price}</td>
             <td id='quantity'><button id="minus_q">-</button><div id = 'quantity_element'>${response[i].quantity}</div><button id="plus_q">+</button></td>
             <td><a href='#delete-container' class='delete' data-id='${response[i]._id}' data-cost='${response[i].price}'><i class="fas fa-times fa-2x" style='color: red;'></i></a></td></tr>`;
 
