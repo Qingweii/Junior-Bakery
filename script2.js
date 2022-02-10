@@ -114,15 +114,23 @@ $(document).ready(function(){
             }
         }
 
+        var t = document.querySelectorAll('#cost');
+        other_prices = 0;
+
+        for (var b = 0; b < t.length; b ++){
+            if(t[b] != y){                // t[b] gets the other prices
+                var price = t[b].innerHTML.replace('$','');   // to only get the value of other prices
+                other_prices = other_prices + Number(price);
+            }
+        }
+
         newest_cost = Number(pastrycosts) * Number(quantity);
         y.innerText = '$' + newest_cost;
-
-        var difference = Number(newest_cost) - Number($('.cart-total-price').html()) 
-        var add = Number($('.cart-total-price').html()) + Number(difference)
+        var difference = Number(newest_cost) - Number($('.cart-total-price').html());
+        var add = Number($('.cart-total-price').html()) + Number(difference) + Number(other_prices);
 
         $('.cart-total-price').html(add); // To print out the latest cost
 
-        //console.log(quantity)
         //updatePastry(q_id, newest_cost, quantity)
     });
 
@@ -163,15 +171,30 @@ $(document).ready(function(){
     // Remove items off the order list
     $('#order_list tbody').on('click', '.delete', function () {
 
-        $(this).closest('tr').remove(); // Remove immediately after button click 
+        var quantity_element = document.getElementById('order_list');
+        var unique = quantity_element.getElementsByTagName('tr');
 
         let pastryid = $(this).data('id');
-        let pastrycosts = $(this).data('cost'); // To get the cost that is being deleted
 
-        var newest_price = Number($('.cart-total-price').html()) - Number(pastrycosts);
-        $('.cart-total-price').html(newest_price); // To print out the latest cost after deletion
+        var t = document.querySelectorAll('#cost');
 
-        deleteinfo(pastryid);
+        for (var b = 0; b <= t.length; b ++){
+            if(unique[b].id == pastryid){
+                //console.log(latest_price)
+            }
+        }
+
+        for (var a = 0; a < t.length; a++){
+            var latest_price = t[a].innerHTML.replace('$','')
+            console.log(latest_price)
+        }
+
+        //$(this).closest('tr').remove(); // Remove immediately after button click 
+        var newest_price = Number($('.cart-total-price').html()) - Number();
+        //$('.cart-total-price').html(newest_price); // To print out the latest cost after deletion
+
+        //console.log(pastrycosts);
+        //deleteinfo(pastryid);
     });
 
     
