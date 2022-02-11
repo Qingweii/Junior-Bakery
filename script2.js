@@ -4,12 +4,20 @@
     pop.classList.toggle('show');
  }
 
- // Footer section (birthday submission)
+
+// Footer section (birthday submission)
 
 function bday(e){
     alert('Your birthday is on its way, We\'ll be counting down to your special day ;)');
     e.preventDefault();
 };
+
+
+// Json data for random generator
+
+
+
+
 
 
 
