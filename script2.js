@@ -74,12 +74,24 @@ $(document).ready(function(){
             }
         }
 
+        var t = document.querySelectorAll('#cost');
+        other_prices = 0;
+
+        for (var b = 0; b < t.length; b ++){
+            if(t[b] != y){                // t[b] gets the other prices
+                var price = t[b].innerHTML.replace('$','');   // to only get the value of other prices
+                other_prices = other_prices + Number(price);
+            }
+        }
+        
+
         newest_cost = Number(pastrycosts) * Number(quantity);
         y.innerText = '$' + newest_cost;
+        var difference = Number(newest_cost) + Number(other_prices);
 
+        $('.cart-total-price').html(difference);
 
-        //console.log(quantity)
-        updatePastry(q_id, newest_cost, quantity)
+        //updatePastry(q_id, newest_cost, quantity)
     });
 
 
@@ -178,22 +190,17 @@ $(document).ready(function(){
 
         var t = document.querySelectorAll('#cost');
 
+
         for (var b = 0; b <= t.length; b ++){
             if(unique[b].id == pastryid){
-                //console.log(latest_price)
+                var latest_price = t[b-1].innerHTML.replace('$','');
             }
         }
 
-        for (var a = 0; a < t.length; a++){
-            var latest_price = t[a].innerHTML.replace('$','')
-            console.log(latest_price)
-        }
+        $(this).closest('tr').remove(); // Remove immediately after button click 
+        var newest_price = Number($('.cart-total-price').html()) - Number(latest_price);
+        $('.cart-total-price').html(newest_price); // To print out the latest cost after deletion
 
-        //$(this).closest('tr').remove(); // Remove immediately after button click 
-        var newest_price = Number($('.cart-total-price').html()) - Number();
-        //$('.cart-total-price').html(newest_price); // To print out the latest cost after deletion
-
-        //console.log(pastrycosts);
         //deleteinfo(pastryid);
     });
 
