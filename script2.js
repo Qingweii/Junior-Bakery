@@ -64,9 +64,9 @@ $(document).ready(function(){
                     quantity = quantity - 1;
                     var x = unique[i].querySelector('#quantity_element');
                     var y = unique[i].querySelector('#cost');
-                    x.innerText = quantity;
+                    x.innerText = quantity;         // to display the quantity when decreased on the html
 
-                } else{    // to show that it has reach the Minimum
+                } else{    // to indicate that it has reach the Minimum
                     var numm = unique[i].querySelector('#quantity_element');
                     numm.style.color = 'red';
                     setTimeout(function(){numm.style.color='black'},500)
@@ -78,20 +78,20 @@ $(document).ready(function(){
         other_prices = 0;
 
         for (var b = 0; b < t.length; b ++){
-            if(t[b] != y){                // t[b] gets the other prices
+            if(t[b] != y){                                     // t[b] gets the other prices
                 var price = t[b].innerHTML.replace('$','');   // to only get the value of other prices
-                other_prices = other_prices + Number(price);
+                other_prices = other_prices + Number(price);  // to add up all the other prices
             }
         }
         
 
-        newest_cost = Number(pastrycosts) * Number(quantity);
+        newest_cost = Number(pastrycosts) * Number(quantity);   // to get the value after quantity value change by multiplying the changed quantity
         y.innerText = '$' + newest_cost;
-        var difference = Number(newest_cost) + Number(other_prices);
+        var difference = Number(newest_cost) + Number(other_prices);    // to add the other prices with the changed value 
 
         $('.cart-total-price').html(difference);
 
-        //updatePastry(q_id, newest_cost, quantity)
+        updatePastry(q_id, newest_cost, quantity)
     });
 
 
@@ -100,9 +100,9 @@ $(document).ready(function(){
     // When plus button is clicked to update quantity
     $('#order_list tbody').on('click', '#plus_q', function(){
 
-        let quantity = $(this).data('quantity');  // to identify the quantity for that selected pastry
-        let q_id = $(this).data('id');  // to identify the ID for which pastry is selected 
-        let pastrycosts = $(this).data('orig'); // To get the original cost
+        let quantity = $(this).data('quantity');    // to identify the quantity for that selected pastry
+        let q_id = $(this).data('id');              // to identify the ID for which pastry is selected 
+        let pastrycosts = $(this).data('orig');     // To get the original cost
 
         var quantity_element = document.getElementById('order_list');
         var unique = quantity_element.getElementsByTagName('tr');
@@ -116,9 +116,9 @@ $(document).ready(function(){
                     quantity = quantity + 1;
                     var x = unique[i].querySelector('#quantity_element');
                     var y = unique[i].querySelector('#cost');
-                    x.innerText = quantity;
+                    x.innerText = quantity;     // to display the quantity when increased on the html
 
-                } else{    // to show that it has reach the Maximum
+                } else{    // to indicate that it has reach the Maximum
                     var numm = unique[i].querySelector('#quantity_element');
                     numm.style.color = 'red';
                     setTimeout(function(){numm.style.color='black'},500)
@@ -130,20 +130,20 @@ $(document).ready(function(){
         other_prices = 0;
 
         for (var b = 0; b < t.length; b ++){
-            if(t[b] != y){                // t[b] gets the other prices
-                var price = t[b].innerHTML.replace('$','');   // to only get the value of other prices
-                other_prices = other_prices + Number(price);
+            if(t[b] != y){                                       // t[b] gets the other prices
+                var price = t[b].innerHTML.replace('$','');     // to only get the value of other prices
+                other_prices = other_prices + Number(price);   // to add up all the other prices
             }
         }
 
-        newest_cost = Number(pastrycosts) * Number(quantity);
+        newest_cost = Number(pastrycosts) * Number(quantity);   // to get the value after quantity value change by multiplying the changed quantity
         y.innerText = '$' + newest_cost;
-        var difference = Number(newest_cost) - Number($('.cart-total-price').html());
-        var add = Number($('.cart-total-price').html()) + Number(difference) + Number(other_prices);
+        var difference = Number(newest_cost) - Number($('.cart-total-price').html());   // To find the differences between the total and the changed value 
+        var add = Number($('.cart-total-price').html()) + Number(difference) + Number(other_prices);   // add all together
 
-        $('.cart-total-price').html(add); // To print out the latest cost
+        $('.cart-total-price').html(add);                      // To print out the latest cost
 
-        //updatePastry(q_id, newest_cost, quantity)
+        updatePastry(q_id, newest_cost, quantity)
     });
 
 
@@ -191,17 +191,17 @@ $(document).ready(function(){
         var t = document.querySelectorAll('#cost');
 
 
-        for (var b = 0; b <= t.length; b ++){
+        for (var b = 0; b <= t.length; b ++){     // must be (<=) so that it includes the last row of the order
             if(unique[b].id == pastryid){
-                var latest_price = t[b-1].innerHTML.replace('$','');
+                var latest_price = t[b-1].innerHTML.replace('$','');  // (-1) to exclude the first row which is the labels '<thead>' from the table
             }
         }
 
-        $(this).closest('tr').remove(); // Remove immediately after button click 
+        $(this).closest('tr').remove();                 // Remove immediately after button click (placed below so that we can still get the value that is being deleted)
         var newest_price = Number($('.cart-total-price').html()) - Number(latest_price);
-        $('.cart-total-price').html(newest_price); // To print out the latest cost after deletion
+        $('.cart-total-price').html(newest_price);      // To print out the latest cost after deletion
 
-        //deleteinfo(pastryid);
+        deleteinfo(pastryid);
     });
 
     
@@ -220,7 +220,8 @@ $(document).ready(function(){
         }
         
         $.ajax(settings).done(function (response) {
-            console.log(response)
+            console.log(response);
+            alert('Deleted Successfully')
         });
 
     }
