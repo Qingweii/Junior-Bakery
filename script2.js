@@ -14,6 +14,7 @@ function bday(e){
 
 
 // Json data for random generator
+var generatorbox = document.getElementById('random_btn')
 
 
 
