@@ -1,8 +1,8 @@
- // Popup message at navigation bar
- function popupFunction(){
+// Popup message at navigation bar
+function popupFunction(){
     var pop = document.getElementById('popup');
     pop.classList.toggle('show');
- }
+}
 
 
 // Footer section (birthday submission)
@@ -13,13 +13,38 @@ function bday(e){
 };
 
 
-// Json data for random generator
-var generatorbox = document.getElementById('random_btn')
+// Displaying and caculating the Timer
+const startingMinutes = 15;
+let time = startingMinutes * 60;  // to get all the seconds
+
+const countdown = document.getElementById('countdown');
+
+
+// Start timer when onclick the start button
+function start(){
+    setInterval(updateCountdown, 1000);  // 1 second interval
+
+    function updateCountdown(){
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        seconds = seconds < 15 ? '0' + seconds : seconds;  // to adjust a glitch for the '0' in the beginning 
+
+        countdown.innerHTML = `${minutes} : ${seconds}`;
+        time --;
+    }
+
+}
 
 
 
+// Random generator
+var generatorbox = document.getElementById('pastry_name')
+var data = ['Lemon of my eye','Once In the Red Moon','King Cat of the Mountain','Sweet and Smoky Taffy','King of Hearts','Maneki Neko','Mad Eclipse','Hazel Jade']
 
-
+function random_generator(){
+    generatorbox.innerHTML = data[Math.floor(Math.random()*data.length)];
+}
 
 
 
