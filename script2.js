@@ -170,7 +170,7 @@ $(document).ready(function(){
 
         $('.cart-total-price').html(difference);
 
-        updatePastry(q_id, newest_cost, quantity)
+        updatePastry(q_id, newest_cost, latest_quantity)
     });
 
 
