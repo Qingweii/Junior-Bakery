@@ -6,7 +6,6 @@ function popupFunction(){
 
 
 // Footer section (birthday submission)
-
 function bday(){
     alert('Your birthday is on its way, We\'ll be counting down to your special day ;)');
     return false;
@@ -35,7 +34,6 @@ function start(){
 
         timecompleted(minutes, seconds);
     }
-     
 
 }
 
@@ -57,6 +55,7 @@ function ans(){
 }
 
 
+
 // hiding quest before start button is clicked
 var game = document.getElementById('quest');
 
@@ -68,21 +67,24 @@ function appear(){
 
 // Showing how much time you have completed for this Quest
 function timecompleted(minutes, seconds){
-    var min_left = startingMinutes - Number(minutes);
-    var sec_left = 60 - Number(seconds);
+    var min_left = startingMinutes - Number(minutes);  // to find the minute upon clicking the submit button
+    var sec_left = 60 - Number(seconds);              // to find the seconds upon clicking the submit button
+    var item = document.getElementById('pastry_name').innerHTML;
 
     var y = 'Time completed' + ':' + " " + min_left + " " + 'mins' + " " + sec_left + " " +'secs';
+    var c = 'Item' + ':' + " " + '"'+ item +'"';
 
     $('#submit_btn').click(function(){
         $(this).data('clicked',true);
-        $('.completion').html(y);
+        $('.completion').html(y);                   // to print out the time taken
+        $('.item').html(c);                      // to print out the intitial item they have generated
     })
     return false;
 }
 
 
 
-// Getting the items to view order page when user click add to cart
+// Getting the items to view for order page when user click add to cart
 $(document).ready(function(){
 
     const APIKEY = '61fe62826a791555010217e9';

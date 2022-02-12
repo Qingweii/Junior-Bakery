@@ -178,6 +178,7 @@ input[type='password']{
     text-align: center;
     padding-top: 10%;
     color: rgb(255, 174, 0);
+    font-size: 16px;
 }
 
 .moto .arrow_down{
@@ -643,7 +644,7 @@ input[type='date']{
 /* Participate page */
 .mini_quest{
     padding-top: 200px;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
     background-color: rgb(255, 242, 224);
 }
 
@@ -821,8 +822,6 @@ input[type='date']{
     font-size: 18px;
     text-align: center;
 }
-
-
 
 
 
