@@ -126,7 +126,6 @@ $(document).ready(function(){
     // When minus button is clicked to update quantity
     $('#order_list tbody').on('click', '#minus_q', function(){
 
-        let quantity = $(this).data('quantity');  // to identify the quantity for that selected pastry
         let q_id = $(this).data('id');  // to identify the ID for which pastry is selected 
         let pastrycosts = $(this).data('orig'); // To get the cost 
 
@@ -138,11 +137,13 @@ $(document).ready(function(){
         for (var i = 0; i < unique.length; i ++){
 
             if (unique[i].id == q_id){
-                if(quantity > min){
-                    quantity = quantity - 1;
-                    var x = unique[i].querySelector('#quantity_element');
+                var x = unique[i].querySelector('#quantity_element');  // to identify the quantity for that selected pastry
+                var latest_quantity = Number(x.innerHTML);
+
+                if(latest_quantity > min){
+                    latest_quantity = latest_quantity - 1;
                     var y = unique[i].querySelector('#cost');
-                    x.innerText = quantity;         // to display the quantity when decreased on the html
+                    x.innerText = latest_quantity;         // to display the quantity when decreased on the html
 
                 } else{    // to indicate that it has reach the Minimum
                     var numm = unique[i].querySelector('#quantity_element');
@@ -163,7 +164,7 @@ $(document).ready(function(){
         }
         
 
-        newest_cost = Number(pastrycosts) * Number(quantity);   // to get the value after quantity value change by multiplying the changed quantity
+        newest_cost = Number(pastrycosts) * Number(latest_quantity);   // to get the value after quantity value change by multiplying the changed quantity
         y.innerText = '$' + newest_cost;
         var difference = Number(newest_cost) + Number(other_prices);    // to add the other prices with the changed value 
 
@@ -178,7 +179,6 @@ $(document).ready(function(){
     // When plus button is clicked to update quantity
     $('#order_list tbody').on('click', '#plus_q', function(){
 
-        let quantity = $(this).data('quantity');    // to identify the quantity for that selected pastry
         let q_id = $(this).data('id');              // to identify the ID for which pastry is selected 
         let pastrycosts = $(this).data('orig');     // To get the original cost
 
@@ -190,11 +190,13 @@ $(document).ready(function(){
         for (var i = 0; i < unique.length; i ++){
 
             if (unique[i].id == q_id){
-                if(quantity < max){
-                    quantity = quantity + 1;
-                    var x = unique[i].querySelector('#quantity_element');
+                var x = unique[i].querySelector('#quantity_element');  // to identify the quantity for that selected pastry
+                var latest_quantity = Number(x.innerHTML);
+
+                if(latest_quantity < max){
+                    latest_quantity = latest_quantity + 1;
                     var y = unique[i].querySelector('#cost');
-                    x.innerText = quantity;     // to display the quantity when increased on the html
+                    x.innerText = latest_quantity;     // to display the quantity when increased on the html
 
                 } else{    // to indicate that it has reach the Maximum
                     var numm = unique[i].querySelector('#quantity_element');
@@ -214,14 +216,14 @@ $(document).ready(function(){
             }
         }
 
-        newest_cost = Number(pastrycosts) * Number(quantity);   // to get the value after quantity value change by multiplying the changed quantity
+        newest_cost = Number(pastrycosts) * Number(latest_quantity);   // to get the value after quantity value change by multiplying the changed quantity
         y.innerText = '$' + newest_cost;
         var difference = Number(newest_cost) - Number($('.cart-total-price').html());   // To find the differences between the total and the changed value 
         var add = Number($('.cart-total-price').html()) + Number(difference) + Number(other_prices);   // add all together
 
         $('.cart-total-price').html(add);                      // To print out the latest cost
 
-        updatePastry(q_id, newest_cost, quantity)
+        updatePastry(q_id, newest_cost, latest_quantity)
     });
 
 
