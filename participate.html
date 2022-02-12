@@ -72,13 +72,13 @@
                 <p>To begin, you will have to find the <strong>“Pastry Name of the Day"</strong> from here. Within the time limit, you will have to go to our physical store and <strong>match the name to the pastry</strong> that can only be found there. Once you have successfully found this mysterious pastry, you will then have to purchase it to <strong>find out the fillings</strong> inside this pastry and input the answer here. The Top 3 winners who answered fast and accurately will receive rewards from our store!</p>
                 <div class="ready">
                     <h2><strong>READY?</strong></h2>
-                    <button class="start_btn" onclick="start(); this.onclick=null;"><i class="fas fa-play-circle fa-3x"></i></button>
+                    <button class="start_btn" onclick="appear(); this.onclick=null;"><i class="fas fa-play-circle fa-3x"></i></button>
                 </div>
             </div>
 
-            <div id="quest">
+            <div id="quest" style="display:none">
                 <div class="timer">
-                    <h3>Time Left</h3>
+                    <h3>Time Left:</h3>
                     <p id='countdown'></p>
                 </div>
                 <div class="generator">
@@ -90,6 +90,21 @@
 
                         <h5>What you have to find in our store</h5>
                         <button id="random_btn" onclick="random_generator()">Generate</button>
+                    </div>
+                </div>
+                <div class="answer">
+                    <div class="answer_box">
+
+                        <h3>What's the filling?</h3>
+
+                        <form class="input_part" onsubmit="return ans()">
+                            <input type='text' class='textarea_a' placeholder='Input answer here' required>
+                            <div class="submit">
+                                <button id="submit_btn">Submit</button>
+                            </div>
+                            <div class="completion"></div>
+                        </form>
+
                     </div>
                 </div>
             </div>

@@ -16,9 +16,9 @@ function popupFunction(){
 
 // Footer section (birthday submission)
 
-function bday(e){
+function bday(){
     alert('Your birthday is on its way, We\'ll be counting down to your special day ;)');
-    e.preventDefault();
+    return false;
 };
 
 

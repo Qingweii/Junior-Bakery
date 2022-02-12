@@ -7,9 +7,9 @@ function popupFunction(){
 
 // Footer section (birthday submission)
 
-function bday(e){
+function bday(){
     alert('Your birthday is on its way, We\'ll be counting down to your special day ;)');
-    e.preventDefault();
+    return false;
 };
 
 
@@ -32,10 +32,12 @@ function start(){
 
         countdown.innerHTML = `${minutes} : ${seconds}`;
         time --;
+
+        timecompleted(minutes, seconds);
     }
+     
 
 }
-
 
 
 // Random generator
@@ -44,6 +46,38 @@ var data = ['Lemon of my eye','Once In the Red Moon','King Cat of the Mountain',
 
 function random_generator(){
     generatorbox.innerHTML = data[Math.floor(Math.random()*data.length)];
+}
+
+
+
+// Submission of answer for Quest
+function ans(){
+    alert('Your answer has been sent. You will be notified via email if you made it to the Top 3. Good Luck!');
+    return false;
+}
+
+
+// hiding quest before start button is clicked
+var game = document.getElementById('quest');
+
+function appear(){
+    game.style.display = 'block';
+    start();
+}
+
+
+// Showing how much time you have completed for this Quest
+function timecompleted(minutes, seconds){
+    var min_left = startingMinutes - Number(minutes);
+    var sec_left = 60 - Number(seconds);
+
+    var y = 'Time completed' + ':' + " " + min_left + " " + 'mins' + " " + sec_left + " " +'secs';
+
+    $('#submit_btn').click(function(){
+        $(this).data('clicked',true);
+        $('.completion').html(y);
+    })
+    return false;
 }
 
 
