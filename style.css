@@ -845,13 +845,14 @@ input[type='date']{
 #qna{
     padding-top: 100px;
     padding-bottom: 100px;
+    background-color: rgb(255, 242, 224);
 }
 
 .platform h1, h4{
     text-align: center;
 }
 
-.right{
+.right, .rightt{
     float:right;
     padding-right: 200px;
 }
@@ -862,7 +863,7 @@ input[type='date']{
     position: absolute;
 }
 
-.comment1,.comment2,.comment3{
+.comment1,.comment2,.comment3,.comment4{
     padding-bottom: 50px;
     width:76%;
     padding-left: 100px;
@@ -875,25 +876,33 @@ input[type='date']{
 }
 
 .comment{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
     padding-bottom: 30px;
     padding-left: 100px;
 }
 
-.comment_input{
+#myinput{
     border: none;
     outline: none;
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-right: 200px;
-    padding-left: 200px;
     border-radius: 10px;
     background-color: rgb(248, 232, 202);
 }
 
-.comment_input input[type='text']{
+#myinput input[type='text']{
     font-size: 18px;
     text-align: start;
 }
+
+.btnn{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
 
 .container_c{
     padding-top: 50px;

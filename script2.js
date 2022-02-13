@@ -55,6 +55,11 @@ function ans(){
 }
 
 
+// Submission of answer for Q&A
+function share(){
+    return false;
+}
+
 
 // hiding quest before start button is clicked
 var game = document.getElementById('quest');
@@ -80,6 +85,16 @@ function timecompleted(minutes, seconds){
         $('.item').html(c);                      // to print out the intitial item they have generated
     })
     return false;
+}
+
+
+// user input will be shown on Q and A session
+function getInput(){
+    var comment = document.getElementById('myinput').value;
+    you = '-' + 'you';
+
+    $('#your_comment').html(comment);
+    $('.rightt').html(you);
 }
 
 
