@@ -27,8 +27,14 @@ var cost_pastry = document.getElementById('price_pastry');
 $('.toggle_button').click(function(){
     if($(this).text() == '6-inch'){
         cost_pastry.innerText = '$58.00';
+
+        ppl = ' ' + 'For Group of 8-12'
+        $('#people').html(ppl)
     } else{
         cost_pastry.innerText = '$69.00';
+
+        ppl = ' ' + 'For Group of 12-18'
+        $('#people').html(ppl)
     }
 });
 
