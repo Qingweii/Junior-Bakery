@@ -604,6 +604,7 @@ input[type='date']{
 .orders{
     padding-top: 200px;
     padding-bottom: 300px;
+    background-color: rgb(255, 242, 224);
 }
 
 .orders h2{
@@ -614,6 +615,8 @@ input[type='date']{
     border: none;
     width: 15px;
     height: 20px;
+    background-color: #000000;
+    color: white;
 }
 
 #quantity_element{
