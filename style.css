@@ -483,7 +483,7 @@ input[type='date']{
 
 #price_pastry{
     padding-left: 400px;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 #description_pastry{
@@ -492,12 +492,13 @@ input[type='date']{
 }
 
 #quantity_pastry{
-    padding-top: 200px;
+    padding-top: 280px;
 }
 
 #minus, #plus{
     width: 35px;
     height: 50px;
+    cursor: pointer;
 }
 
 #number{
@@ -505,7 +506,7 @@ input[type='date']{
 }
 
 #cart_pastry{
-    padding-top: 200px;
+    padding-top: 280px;
     padding-left: 200px;
 }
 
@@ -513,10 +514,24 @@ input[type='date']{
     width: 300px;
     height: 50px;
     font-size: 17px;
+    cursor: pointer;
 }
 
 #expect_pastry{
-    padding-top: 300px;
+    padding-top: 400px;
+}
+
+
+#toggle_pastry{
+    padding-top: 190px;
+    padding-left: 30px;
+}
+
+.toggle_button{
+    width: 200px;
+    height: 50px;
+    font-size: 17px;
+    cursor: pointer;
 }
 
 .icons{

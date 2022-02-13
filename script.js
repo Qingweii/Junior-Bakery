@@ -21,6 +21,19 @@ function bday(){
 };
 
 
+// Toggle button between 6-inch and 10-inch cake
+var cost_pastry = document.getElementById('price_pastry');
+
+$('.toggle_button').click(function(){
+    if($(this).text() == '6-inch'){
+        cost_pastry.innerText = '$58.00';
+    } else{
+        cost_pastry.innerText = '$69.00';
+    }
+});
+
+
+
 
 //Plus and Minus button for quantity value (Add to cart page)
 var minusbtn = document.getElementById('minus');
@@ -127,6 +140,7 @@ $(document).ready(function(){
         let pastryImg = document.getElementById('image').getAttribute('src');
         let pastryPrice = Number(cost) * Number(pastryNum);
         let origPrice = document.getElementById('price_pastry').innerText.replace('$','');
+        
 
         // Get pastry info when user click add to cart
         let jsondata = {

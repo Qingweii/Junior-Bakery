@@ -67,7 +67,7 @@ function appear(){
 
 // Showing how much time you have completed for this Quest
 function timecompleted(minutes, seconds){
-    var min_left = startingMinutes - Number(minutes);  // to find the minute upon clicking the submit button
+    var min_left = Number(startingMinutes-1) - Number(minutes);  // to find the minute upon clicking the submit button
     var sec_left = 60 - Number(seconds);              // to find the seconds upon clicking the submit button
     var item = document.getElementById('pastry_name').innerHTML;
 
@@ -277,7 +277,7 @@ $(document).ready(function(){
             }
         }
 
-        $(this).closest('tr').remove();                 // Remove immediately after button click (placed below so that we can still get the value that is being deleted)
+        $(this).closest('tr').remove();                 // Remove immediately after button click (placed below so that i can still get the value that is being deleted)
         var newest_price = Number($('.cart-total-price').html()) - Number(latest_price);
         $('.cart-total-price').html(newest_price);      // To print out the latest cost after deletion
 
@@ -301,7 +301,6 @@ $(document).ready(function(){
         
         $.ajax(settings).done(function (response) {
             console.log(response);
-            alert('Deleted Successfully')
         });
 
     }
