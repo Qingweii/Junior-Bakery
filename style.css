@@ -931,3 +931,8 @@ input[type='date']{
 
 
 /* Media Queries */
+@media (max-width: 428px) {
+    p {
+        font-size: 1.25rem;
+    }
+}

@@ -92,9 +92,12 @@ function timecompleted(minutes, seconds){
 function getInput(){
     var comment = document.getElementById('myinput').value;
     you = '-' + 'you';
+    var count = document.getElementById('pp').innerText;
+    total = Number(count) + 50;   // Update points when user comment on Q&A
 
     $('#your_comment').html(comment);
     $('.rightt').html(you);
+    $('#pp').html(total)
 }
 
 
