@@ -417,6 +417,11 @@ input[type='date']{
 
 
 /* Preview items page (add to cart) */
+#preview_page{
+    background-color: rgb(255, 242, 224);
+}
+
+
 .info_pie .image img{
     width: 500px;
     height: 600px;
@@ -558,6 +563,10 @@ input[type='date']{
 /* Review box */
 .container_r{
     position: relative;
+}
+
+#reviews{
+    background-color: rgb(255, 242, 224);
 }
 
 .reviewbox{
@@ -783,7 +792,7 @@ input[type='date']{
 .answer{
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 100px;
 }
 
@@ -978,6 +987,75 @@ input[type='date']{
 }
 
 .show {display:block;}
+
+
+
+/* Contact Page */
+.contact_intro h1{
+    padding-top: 230px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.contact_intro p{
+    padding-bottom: 60px;
+    width:80%;
+    padding-left: 24%;
+    font-size: 17px;
+}
+
+.info_container{
+    display: flex;
+    justify-content: center;
+}
+
+.contact_info{
+    padding-bottom: 200px;
+    width: 50%;
+}
+
+.name_container{
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.help_container{
+    width: 100%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#choose_box{
+    background-color: #dfdfdf;
+}
+
+#msg_box{
+    padding-bottom: 200px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.submit_button{
+    border: none;
+    outline: none;
+    text-decoration: none;
+    width: 140px;
+    height: 40px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.submit_button:hover{
+    background-color: rgb(196, 196, 196);
+}
+
 
 
 
