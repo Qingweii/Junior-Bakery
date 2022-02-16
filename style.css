@@ -1118,6 +1118,12 @@ input[type='date']{
     padding-top: 50px;
 }
 
+.google_map{
+    display:flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
 
 
 
