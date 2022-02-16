@@ -866,6 +866,20 @@ input[type='date']{
     position: absolute;
 }
 
+.arrows .up,.down{
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+#voters:hover + .hide{
+    transition: 0.3s ease-out;
+    display: block;
+}
+
+
 #topic{
     padding-bottom: 50px;
     width:76%;
@@ -946,7 +960,7 @@ input[type='date']{
 #dropdown1{
     display: block;
     color: #000000;
-    background-color: #bebebe;
+    background-color: #e2e1e1;
     padding-left: 30px;
     padding-right: 30px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

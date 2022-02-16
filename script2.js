@@ -104,8 +104,28 @@ function getInput(){
 }
 
 
+
+// Voting up
+function voteup(){
+    var votes = document.getElementById('voters').innerText;
+    new_vote = Number(votes) + 1
+
+    $('#voters').html(new_vote)
+}
+
+
+// Voting down
+function votedown(){
+    var votes = document.getElementById('voters').innerText;
+    new_vote = Number(votes) - 1;
+
+    $('#voters').html(new_vote)
+}
+
+
+
 // Clickable dropdown menu for (share button) (Q&A)
-function share(){
+function give(){
     document.getElementById('dropdown').classList.toggle('show');
 }
 
@@ -116,6 +136,13 @@ function link(){
 
     alert('Copied to Clipboard!')
 }
+
+// Add to bookmark 
+function color(){
+    var bookmark = document.getElementById('save');
+    bookmark.style.color = '#4e2819';
+}
+
 
 
 // Getting the items to view for order page when user click add to cart

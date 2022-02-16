@@ -125,9 +125,10 @@
                 <div class="container_c">
                     <div class="platform_box">
                         <div class="arrows">
-                            <i class="fa-solid fa-arrow-up fa-2x"></i>
-                            <h2>18.1k</h2>
-                            <i class="fa-solid fa-arrow-down fa-2x"></i>
+                            <span class='up' onclick="voteup()"><i class="fa-solid fa-arrow-up fa-2x"></i></span>
+                            <div id='voters' style="font-size: 26px;">900</div>
+                            <div class="hide">Number of Voters!</div>
+                            <span class='down' onclick="votedown()"><i class="fa-solid fa-arrow-down fa-2x"></i></span>
                         </div>
 
                         <div class="comment_container">
@@ -158,7 +159,7 @@
     
                         <div class="icons_c">
                             <span class='c'><i class="fa-solid fa-comment fa-2x"></i> 1.9k comments</span>
-                            <div class='share' onclick="share()">
+                            <div class='share' onclick="give()">
                                 <div id='dropdown_btn'><i class="fa-solid fa-share fa-2x"></i>Share</div>
 
                                 <div id="dropdown" class="dropdown_content">
@@ -166,7 +167,7 @@
                                 </div>
 
                             </div>
-                            <span class='share'><i class="fa-solid fa-bookmark fa-2x"></i> Save</span>
+                            <span id='save' onclick="color()"><i class="fa-solid fa-bookmark fa-2x"></i> Save</span>
                         </div>
                     </div>
                 </div>
