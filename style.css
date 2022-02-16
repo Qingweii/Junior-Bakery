@@ -866,6 +866,13 @@ input[type='date']{
     position: absolute;
 }
 
+#topic{
+    padding-bottom: 50px;
+    width:76%;
+    padding-right: 20px;
+}
+
+
 .comment1,.comment2,.comment3,.comment4{
     padding-bottom: 50px;
     width:76%;
@@ -927,6 +934,39 @@ input[type='date']{
     padding-left: 20px;
 
 }
+
+
+/* dropdown content */
+.dropdown_content{
+    display: none;
+    z-index: 1;
+    position: absolute;
+}
+
+#dropdown1{
+    display: block;
+    color: #000000;
+    background-color: #bebebe;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#dropdown_btn{
+    cursor: pointer;
+}
+
+#dropdown_btn:hover{
+    color: #4e2819;
+    transition: 0.2s ease-out;
+}
+
+.show {display:block;}
+
+
+
 
 
 

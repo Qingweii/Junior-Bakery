@@ -70,11 +70,13 @@ function appear(){
 }
 
 
-// Showing how much time you have completed for this Quest
+// Showing how much time you have completed for this Quest + item that user have generated
 function timecompleted(minutes, seconds){
     var min_left = Number(startingMinutes-1) - Number(minutes);  // to find the minute upon clicking the submit button
     var sec_left = 60 - Number(seconds);              // to find the seconds upon clicking the submit button
     var item = document.getElementById('pastry_name').innerHTML;
+    var count = document.getElementById('pp').innerText;
+    total = Number(count) + 50;   // Update points when user comment on Q&A
 
     var y = 'Time completed' + ':' + " " + min_left + " " + 'mins' + " " + sec_left + " " +'secs';
     var c = 'Item' + ':' + " " + '"'+ item +'"';
@@ -83,6 +85,7 @@ function timecompleted(minutes, seconds){
         $(this).data('clicked',true);
         $('.completion').html(y);                   // to print out the time taken
         $('.item').html(c);                      // to print out the intitial item they have generated
+        $('#pp').html(total)
     })
     return false;
 }
@@ -93,13 +96,26 @@ function getInput(){
     var comment = document.getElementById('myinput').value;
     you = '-' + 'you';
     var count = document.getElementById('pp').innerText;
-    total = Number(count) + 50;   // Update points when user comment on Q&A
+    total = Number(count) + 30;   // Update points when user comment on Q&A
 
     $('#your_comment').html(comment);
     $('.rightt').html(you);
     $('#pp').html(total)
 }
 
+
+// Clickable dropdown menu for (share button) (Q&A)
+function share(){
+    document.getElementById('dropdown').classList.toggle('show');
+}
+
+// Copy to clickboard 
+function link(){
+    var copylink = document.getElementById('topic').innerText;
+    navigator.clipboard.writeText(copylink)
+
+    alert('Copied to Clipboard!')
+}
 
 
 // Getting the items to view for order page when user click add to cart
