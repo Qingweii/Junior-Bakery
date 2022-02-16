@@ -144,6 +144,13 @@ function color(){
 }
 
 
+// Contact page section (submission of contact form)
+function submition(){
+    alert('Successfully sent. Thank You for reaching out to us!');
+    return false;
+}
+
+
 
 // Getting the items to view for order page when user click add to cart
 $(document).ready(function(){

@@ -25,11 +25,12 @@ html{
 
 .textarea{
     border: none;
-    background-color: #dfdfdf;
+    background-color: #f3f3f3;
     position: relative;
     width: 100%;
     line-height: 2em;
     border-radius: 3px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 input[type='text']{
@@ -675,6 +676,7 @@ input[type='date']{
 }
 
 .intro_quest h1,h4{
+    padding-top: 30px;
     font-weight: bold;
     text-align: center;
     font-size: 28px;
@@ -702,6 +704,7 @@ input[type='date']{
     text-align: center;
     color: #ebebeb;
     background-color: #4e2819;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .start_btn{
@@ -711,6 +714,9 @@ input[type='date']{
     background-color: #4e2819;
 }
 
+.start_btn:hover{
+    color: #ffe8d9;
+}
 
 
 /* Generator */
@@ -748,6 +754,7 @@ input[type='date']{
     padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .generator_box h3{
@@ -806,6 +813,7 @@ input[type='date']{
     padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .answer_box h3{
@@ -844,6 +852,11 @@ input[type='date']{
     font-weight: bold;
     font-size: 18px;
     width: 30%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#submit_btn:hover{
+    background-color: rgb(243, 216, 165);
 }
 
 .input_part input[type='text']{
@@ -923,6 +936,7 @@ input[type='date']{
     padding-bottom: 50px;
     border-radius: 10px;
     background-color: rgb(248, 232, 202);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 #myinput input[type='text']{
@@ -969,7 +983,7 @@ input[type='date']{
 #dropdown1{
     display: block;
     color: #000000;
-    background-color: #e2e1e1;
+    background-color: #f3f3f3;
     padding-left: 30px;
     padding-right: 30px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -991,6 +1005,12 @@ input[type='date']{
 
 
 /* Contact Page */
+#contact{
+    background-color: rgb(255, 242, 224);
+    padding-bottom: 200px;
+}
+
+
 .contact_intro h1{
     padding-top: 230px;
     text-align: center;
@@ -999,11 +1019,27 @@ input[type='date']{
 }
 
 .contact_intro p{
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     width:80%;
     padding-left: 24%;
     font-size: 17px;
 }
+
+.ct{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 100px;
+}
+
+.telephone{
+    padding-right: 30px;
+}
+
+.mail{
+    padding-left: 30px;
+}
+
 
 .info_container{
     display: flex;
@@ -1011,7 +1047,7 @@ input[type='date']{
 }
 
 .contact_info{
-    padding-bottom: 200px;
+    padding-bottom: 150px;
     width: 50%;
 }
 
@@ -1028,7 +1064,8 @@ input[type='date']{
 }
 
 #choose_box{
-    background-color: #dfdfdf;
+    background-color: #f3f3f3;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 #msg_box{
@@ -1047,17 +1084,39 @@ input[type='date']{
     text-decoration: none;
     width: 140px;
     height: 40px;
-    background-color: rgb(219, 219, 219);
+    background-color: #f3f3f3;
     border-radius: 10px;
     font-size: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .submit_button:hover{
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(218, 218, 218);
 }
 
 
 
+/* Where to find us section */
+#location h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    padding-bottom: 30px;
+}
+
+
+#model1{
+    display:flex;
+    flex-direction: column;
+    padding-left: 25%;
+}
+
+#model2{
+    display:flex;
+    flex-direction: column;
+    padding-left: 25%;
+    padding-top: 50px;
+}
 
 
 
