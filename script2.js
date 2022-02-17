@@ -151,7 +151,23 @@ function submition(){
 }
 
 
-// Card Number formatting
+
+// Card Number validation
+function showme(e){
+    if (e.value.length > 0){
+        if (e.value.length % 4 == 0){
+            e.value += '    ';
+        }
+    }
+}
+
+
+// After payment done
+function payment(){
+    alert('Successful. Thank you for shopping with us!')
+    return false;
+}
+
 
 
 
@@ -196,6 +212,14 @@ $(document).ready(function(){
         var with_tax = Number(tax) + Number(money);
 
         $('#final_amt').html(with_tax);
+
+        $('.checkout').click(function(){
+            if($('.cart-total-price').text() != 0){
+                document.getElementById('whole_payment').style.display = 'block'
+            } else{
+                alert('Your cart is empty!')
+            }
+        })
     });
 
 

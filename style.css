@@ -845,6 +845,11 @@ input[type='date']{
 }
 
 
+#payment_load{
+    position: absolute;
+    left: 10%;
+    top: 15%;
+}
 
 
 /* Participate page */

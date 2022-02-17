@@ -9,6 +9,11 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
     <body>
+
+        <!-- Loading page -->
+        <div id='payment_load' style='display:none'>
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_58vkk48j.json"  background="transparent"  speed="1"  style="width: 1000px; height: 1000px;"  loop  autoplay></lottie-player>
+        </div>
         
         <!-- Navigation bar -->
         <section class='header'>
@@ -69,63 +74,65 @@
 
 
         <!-- Payment section-->
-        <div id="checkout_info">
-            <div class="payment_container">
-                <h3>Confirm Purchase</h3>
-
-                <div class="subtotal_purchase">
-                    <div class="subtotal_amt">
-                        <p>Subtotal</p>
-                        <div>$<strong class="cart-total-price-get"></strong></div>
-                    </div>
-                    <div class="shipping_fee_container">
-                        <p>Shipping</p>
-                        <div>$<strong id="shipping_fee">2.99</strong></div>
-                    </div>
-                    <div class="final_amt_container">
-                        <p>Total (Tax included)</p>
-                        <div>$<strong id="final_amt"></strong></div>
-                    </div>
-                    <button class="pay_btn">Pay</button>
-                </div>
-
-                <div class="card_info">
-                    <div class="info1">
-                        <div class="form-group owner">
-                            <label for="owner">Name on card</label>
-                            <input type="text" class="form-control" id="owner">
+        <div id="whole_payment"  style="display:none">
+            <div id="checkout_info">
+                <form class="payment_container" onsubmit="return payment()">
+                    <h3>Confirm Purchase</h3>
+    
+                    <div class="subtotal_purchase">
+                        <div class="subtotal_amt">
+                            <p>Subtotal</p>
+                            <div>$<strong class="cart-total-price-get"></strong></div>
                         </div>
-                        <div class="form-group num" id="card-number-field">
-                            <label for="cardNumber">Card Number</label>
-                            <input type="number" class="form-control" id="cardNumber">
+                        <div class="shipping_fee_container">
+                            <p>Shipping</p>
+                            <div>$<strong id="shipping_fee">2.99</strong></div>
+                        </div>
+                        <div class="final_amt_container">
+                            <p>Total (Tax included)</p>
+                            <div>$<strong id="final_amt"></strong></div>
+                        </div>
+                        <button class="pay_btn">Pay</button>
+                    </div>
+    
+                    <div class="card_info">
+                        <div class="info1">
+                            <div class="form-group owner">
+                                <label for="owner">Name on card</label>
+                                <input type="text" class="form-control" id="owner" required>
+                            </div>
+                            <div class="form-group num" id="card-number-field">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="text" class="form-control" id="cardNumber" onkeydown="showme(this)" required>
+                            </div>
+                        </div>
+                        <div class="info2">
+                            <div class="form-group date">
+                                <label for="expireDate">Expiration Date</label>
+                                <input type="month" class="form-control" id="expireDate" required>
+                            </div>
+                            <div class="form-group CVV">
+                                <label for="cvv">CVV</label>
+                                <input type="password" class="form-control" maxlength="3" id="cvv" required>
+                            </div>
                         </div>
                     </div>
-                    <div class="info2">
-                        <div class="form-group date">
-                            <label for="expireDate">Expiration Date</label>
-                            <input type="month" class="form-control" id="expireDate">
+    
+                    <div class="cards">
+                        <div class="credit radio"> <img class="pay" src="https://i.imgur.com/WIAP9Ku.jpg">
+                            <p class="mine">Credit Card</p>
                         </div>
-                        <div class="form-group CVV">
-                            <label for="cvv">CVV</label>
-                            <input type="password" class="form-control" maxlength="3" id="cvv">
+                        <div class="debit radio grey"> <img class="pay" src="https://i.imgur.com/OdxcctP.jpg">
+                            <p class="mine">Debit Card</p>
+                        </div>
+                        <div class="paypal radio grey"> <img class="pay" src="https://i.imgur.com/cMk1MtK.jpg">
+                            <p class="mine">PayPal</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="cards">
-                    <div class="credit radio"> <img class="pay" src="https://i.imgur.com/WIAP9Ku.jpg">
-                        <p class="mine">Credit Card</p>
-                    </div>
-                    <div class="debit radio grey"> <img class="pay" src="https://i.imgur.com/OdxcctP.jpg">
-                        <p class="mine">Debit Card</p>
-                    </div>
-                    <div class="paypal radio grey"> <img class="pay" src="https://i.imgur.com/cMk1MtK.jpg">
-                        <p class="mine">PayPal</p>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
-
+        
 
 
         <!-- Footer section -->
@@ -161,7 +168,7 @@
 
         </footer>
 
-
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
