@@ -151,7 +151,7 @@ function submition(){
 }
 
 
-// Payment Page to summarise the total
+// Card Number formatting
 
 
 
@@ -400,5 +400,10 @@ $(document).ready(function(){
         });
 
     }
+
+    $('.cards .radio').click(function(){
+        $('.radio').addClass('grey');
+        $(this).removeClass('grey');
+    })
 
 });

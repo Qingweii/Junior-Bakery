@@ -387,20 +387,27 @@ input[type='date']{
 
 .menu_list img{
     border-radius: 10px;
+}
+
+.menu_list img:hover{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
+.menu1{
+    padding-right: 40px;
+}
+
 .menu2{
-    padding-left: 90px;
+    padding-left: 55px;
 }
 
 .menu3{
-    padding-right: 30px;
+    padding-right: 80px;
 }
 
 .pastry .image-main{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     position: absolute;
     z-index: 1;
@@ -408,8 +415,8 @@ input[type='date']{
 
 .pastry img.image-hover{
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     opacity: 0;
     z-index: 1;
@@ -423,7 +430,7 @@ input[type='date']{
 }
 
 .cost{
-    padding-top: 320px;
+    padding-top: 370px;
     font-size: 15px;
 }
 
@@ -520,8 +527,12 @@ input[type='date']{
     cursor: pointer;
     background-color: white;
     border: 1px solid burlywood;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     outline: none;
+}
+
+#minus:hover, #plus:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
 }
 
 #number{
@@ -541,7 +552,11 @@ input[type='date']{
     background-color: white;
     outline: none;
     border: 1px solid burlywood;
+}
+
+#add_to_cart_button:hover{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
 }
 
 #expect_pastry{
@@ -561,8 +576,12 @@ input[type='date']{
     cursor: pointer;
     background-color: white;
     border: 1px solid burlywood;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     outline: none;
+}
+
+.toggle_button:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
 }
 
 .icons{
@@ -688,9 +707,12 @@ input[type='date']{
     background-color: #000000;
     color: white;
     border-radius: 10px;
-    font-weight: bold;
     font-size: 18px;
+}
+
+.checkout:hover{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
 }
 
 
@@ -718,6 +740,7 @@ input[type='date']{
     padding-top: 30px;
     padding-bottom: 40px;
     padding-left: 20px;
+    width: 30%;
 }
 
 
@@ -726,6 +749,7 @@ input[type='date']{
     height: 40px;
     object-fit: cover;
     border-radius: 8px;
+    cursor: pointer;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -736,10 +760,20 @@ input[type='date']{
     padding: 5px;
 }
 
+.grey{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    color: #E0E0E0;
+}
+
 .mine{
     padding-top: 13px;
     padding-left: 20px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .card_info{
@@ -792,6 +826,22 @@ input[type='date']{
 
 .final_amt_container p{
     padding-right:  50px;
+}
+
+.pay_btn{
+    outline: none;
+    background-color: black;
+    border: none;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.pay_btn:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
 }
 
 
