@@ -393,6 +393,34 @@ input[type='date']{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
+.quick{
+    position: absolute;
+    z-index: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(230, 164, 43);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.quick:hover{
+    background-color: rgb(218, 141, 0);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
+}
+
+.view{
+    width: 100%;
+    padding-left: 115px;
+    padding-top: 150px;
+}
+
 .menu1{
     padding-right: 40px;
 }
@@ -430,7 +458,7 @@ input[type='date']{
 }
 
 .cost{
-    padding-top: 370px;
+    padding-top: 220px;
     font-size: 15px;
 }
 
@@ -658,7 +686,7 @@ input[type='date']{
 /* Order cart page */
 .orders{
     padding-top: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     background-color: rgb(255, 242, 224);
 }
 
@@ -898,7 +926,8 @@ input[type='date']{
 }
 
 .start_btn:hover{
-    color: #ffe8d9;
+    color: #fff2df;
+    transition: 0.2s ease-in-out;
 }
 
 
@@ -914,11 +943,12 @@ input[type='date']{
 }
 
 .timer h3{
-    font-size: 35px;
+    font-size: 28px;
 }
 
 #countdown{
     font-size: 30px;
+    padding-left: 30px;
 }
 
 
@@ -1035,11 +1065,11 @@ input[type='date']{
     font-weight: bold;
     font-size: 18px;
     width: 30%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 #submit_btn:hover{
-    background-color: rgb(243, 216, 165);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
 }
 
 .input_part input[type='text']{
@@ -1237,6 +1267,8 @@ input[type='date']{
 .name_container{
     width: 100%;
     padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .help_container{
@@ -1246,8 +1278,26 @@ input[type='date']{
     flex-direction: column;
 }
 
+.message_container{
+    width: 100%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
 #choose_box{
-    background-color: #f3f3f3;
+    background-color: none;
+    border: 2px solid rgb(202, 160, 105);
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.textarea1{
+    background-color: none;
+    border: 2px solid rgb(202, 160, 105);
+    outline: none;
+    border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -1262,19 +1312,19 @@ input[type='date']{
 }
 
 .submit_button{
-    border: none;
+    border: 2px solid rgb(202, 160, 105);
     outline: none;
     text-decoration: none;
     width: 140px;
     height: 40px;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     border-radius: 10px;
     font-size: 20px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .submit_button:hover{
-    background-color: rgb(218, 218, 218);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
 }
 
 
@@ -1352,20 +1402,18 @@ input[type='date']{
 }
 
 .part_btn{
-    border: none;
+    border: 2px solid rgb(202, 160, 105);
     outline: none;
-    background-color: rgb(248, 232, 202);
-    color: #4e2819;
-    font-weight: bolder;
-    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
     width: 180px;
     height: 50px;
     border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .part_btn:hover{
-    background-color: rgb(248, 228, 192);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
 }
 
 
