@@ -162,14 +162,13 @@ function showme(e){
 }
 
 
-// After payment done
+
+// Payment upon submission
 function payment(){
-    alert('Successful. Thank you for shopping with us!')
+    alert('Payment Successful. We are preparing your order now :)');
+    location.reload();
     return false;
 }
-
-
-
 
 
 // Getting the items to view for order page when user click add to cart
@@ -213,7 +212,7 @@ $(document).ready(function(){
 
         $('#final_amt').html(with_tax);
 
-        $('.checkout').click(function(){
+        $('.checkout').click(function(){   // Checkout Validation
             if($('.cart-total-price').text() != 0){
                 document.getElementById('whole_payment').style.display = 'block'
             } else{
@@ -403,6 +402,21 @@ $(document).ready(function(){
 
         deleteinfo(pastryid);
     });
+
+
+
+    // Remove all items upon checkout btn
+    $('.pay_btn').on('click', function(){
+        var quantity_element = document.getElementById('order_list');
+        var unique = quantity_element.getElementsByTagName('tr');
+
+        for (var i = 1; i < unique.length; i++){  // to get all the ID of the items
+            ids = unique[i].id;
+
+            deleteinfo(ids);
+        }
+
+    })
 
     
     function deleteinfo(id) {
