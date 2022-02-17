@@ -151,6 +151,10 @@ function submition(){
 }
 
 
+// Payment Page to summarise the total
+
+
+
 
 // Getting the items to view for order page when user click add to cart
 $(document).ready(function(){
@@ -186,6 +190,12 @@ $(document).ready(function(){
 
         $('#order_list tbody').html(order); // Get items from database to innerHTML body
         $('.cart-total-price').html(money);
+        
+        $('.cart-total-price-get').html(money);
+        var tax = document.getElementById('shipping_fee').innerText;
+        var with_tax = Number(tax) + Number(money);
+
+        $('#final_amt').html(with_tax);
     });
 
 
@@ -206,11 +216,11 @@ $(document).ready(function(){
 
             if (unique[i].id == q_id){
                 var x = unique[i].querySelector('#quantity_element');  // to identify the quantity for that selected pastry
+                var y = unique[i].querySelector('#cost');
                 var latest_quantity = Number(x.innerHTML);
 
                 if(latest_quantity > min){
                     latest_quantity = latest_quantity - 1;
-                    var y = unique[i].querySelector('#cost');
                     x.innerText = latest_quantity;         // to display the quantity when decreased on the html
 
                 } else{    // to indicate that it has reach the Minimum
@@ -236,7 +246,13 @@ $(document).ready(function(){
         y.innerText = '$' + newest_cost;
         var difference = Number(newest_cost) + Number(other_prices);    // to add the other prices with the changed value 
 
-        $('.cart-total-price').html(difference);
+        $('.cart-total-price').html(difference);                        // To print out the latest cost
+        
+        $('.cart-total-price-get').html(difference);                    // Update Payment page
+        var tax = document.getElementById('shipping_fee').innerText;
+        var with_tax = Number(tax) + Number(difference);
+
+        $('#final_amt').html(with_tax);
 
         updatePastry(q_id, newest_cost, latest_quantity)
     });
@@ -259,11 +275,11 @@ $(document).ready(function(){
 
             if (unique[i].id == q_id){
                 var x = unique[i].querySelector('#quantity_element');  // to identify the quantity for that selected pastry
+                var y = unique[i].querySelector('#cost');
                 var latest_quantity = Number(x.innerHTML);
 
                 if(latest_quantity < max){
                     latest_quantity = latest_quantity + 1;
-                    var y = unique[i].querySelector('#cost');
                     x.innerText = latest_quantity;     // to display the quantity when increased on the html
 
                 } else{    // to indicate that it has reach the Maximum
@@ -290,6 +306,12 @@ $(document).ready(function(){
         var add = Number($('.cart-total-price').html()) + Number(difference) + Number(other_prices);   // add all together
 
         $('.cart-total-price').html(add);                      // To print out the latest cost
+        
+        $('.cart-total-price-get').html(add);                  // Update Payment page
+        var tax = document.getElementById('shipping_fee').innerText;
+        var with_tax = Number(tax) + Number(add);
+
+        $('#final_amt').html(with_tax);
 
         updatePastry(q_id, newest_cost, latest_quantity)
     });
@@ -348,6 +370,12 @@ $(document).ready(function(){
         $(this).closest('tr').remove();                 // Remove immediately after button click (placed below so that i can still get the value that is being deleted)
         var newest_price = Number($('.cart-total-price').html()) - Number(latest_price);
         $('.cart-total-price').html(newest_price);      // To print out the latest cost after deletion
+        
+        $('.cart-total-price-get').html(newest_price);  // Update Payment page
+        var tax = document.getElementById('shipping_fee').innerText;
+        var with_tax = Number(tax) + Number(newest_price);
+
+        $('#final_amt').html(with_tax);
 
         deleteinfo(pastryid);
     });
