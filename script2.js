@@ -84,7 +84,7 @@ function timecompleted(minutes, seconds){
     $('#submit_btn').click(function(){
         $(this).data('clicked',true);
         $('.completion').html(y);                   // to print out the time taken
-        $('.item').html(c);                      // to print out the intitial item they have generated
+        $('.item').html(c);                      // to print out the initial item they have generated
         $('#pp').html(total)
     })
     return false;
