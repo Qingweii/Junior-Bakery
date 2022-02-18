@@ -21,6 +21,25 @@ function bday(){
 };
 
 
+// Show quick view page upon clicking quick view button
+$('.quick').click(function(){
+    document.getElementById('qck_container').style.display = 'block';
+})
+
+$('#close_q').click(function(){
+    document.getElementById('qck_container').style.display = 'none';
+    $('#overlay').remove();   // remove overlay after cancel button
+})
+
+// to darken the background upon quick view button
+function check(){
+    $('<div/>',{
+        id:"overlay"
+    }).appendTo("body");  // append overlay to body
+}
+
+
+
 // Toggle button between 6-inch and 10-inch cake
 var cost_pastry = document.getElementById('price_pastry');
 
@@ -78,58 +97,6 @@ plusbtn.onclick = function(){
     }
 };
 
-
-
-
-// Carousel (Viewing Pastry)
-let slidePosition = 0;
-const slide = document.getElementsByClassName('image');
-const totalSlide = slide.length;
-
-document.getElementById('next').addEventListener('click',function(){
-    movetoNextSlide();
-});
-
-document.getElementById('prev').addEventListener('click',function(){
-    movetoPrevSlide();
-});
-
-function updateSlidePosition(){
-    
-    for (let move of slide){
-        move.classList.remove('image--visible');
-        move.classList.add('image--hidden');
-    }
-
-    slide[slidePosition].classList.add('image--visible');
-}
-
-
-function movetoNextSlide() {
-
-    if (slidePosition === totalSlide -1){
-        slidePosition = 0;
-    } else{
-        slidePosition++;
-    }
-
-    updateSlidePosition();
-};
-
-function movetoPrevSlide(){
-
-    if (slidePosition === 0){
-        slidePosition = totalSlide -1;
-    } else{
-        slidePosition--;
-    }
-
-    updateSlidePosition();
-};
-
-
-
-
 // Add to cart page
 $(document).ready(function(){
     
@@ -183,3 +150,52 @@ $(document).ready(function(){
 
 
 });
+
+
+// Carousel (Viewing Pastry)
+let slidePosition = 0;
+const slide = document.getElementsByClassName('image');
+const totalSlide = slide.length;
+
+document.getElementById('next').addEventListener('click',function(){
+    movetoNextSlide();
+});
+
+document.getElementById('prev').addEventListener('click',function(){
+    movetoPrevSlide();
+});
+
+function updateSlidePosition(){
+    
+    for (let move of slide){
+        move.classList.remove('image--visible');
+        move.classList.add('image--hidden');
+    }
+
+    slide[slidePosition].classList.add('image--visible');
+}
+
+
+function movetoNextSlide() {
+
+    if (slidePosition === totalSlide -1){
+        slidePosition = 0;
+    } else{
+        slidePosition++;
+    }
+
+    updateSlidePosition();
+};
+
+function movetoPrevSlide(){
+
+    if (slidePosition === 0){
+        slidePosition = totalSlide -1;
+    } else{
+        slidePosition--;
+    }
+
+    updateSlidePosition();
+};
+
+

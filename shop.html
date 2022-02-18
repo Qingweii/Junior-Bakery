@@ -61,6 +61,64 @@
 
         </section>
 
+        <div id="qck_container" style="display:none">
+            <div id="quick_popup">
+                <div id="quick_view_container">
+                    <div class="quick_info">
+                        <button id="close_q">&times;</button>
+    
+                        <div class="simple_info">
+                            <h2 id='name_pastry'><strong>Pecan in the sky</strong></h2>
+                            <strong>- Pecan Pie -</strong>
+    
+                            <div class="stock">
+                                <h1 id='price_pastry' style="font-size: 26px">$45.00</h1>
+                                <p class="in"><i class="fas fa-check fa-1x"></i> In stock</p>
+                            </div>
+    
+                            <div class="review_love">
+                                <i class="fas fa-heart" class="love"></i>
+                                <i class="fas fa-heart" class="love"></i>
+                                <i class="fas fa-heart" class="love"></i>
+                                <i class="fas fa-heart" class="love"></i>
+                                <i class="fas fa-heart" class="love"></i>
+                                <p>(857)</p>
+                            </div>
+
+                            <div class="icon_s">
+                                <i class="fas fa-gift"></i><p style="font-size: 13px">Approximately 7' and 18cm / 8 slices</p>
+                            </div>
+    
+                            <div class="icon_s">
+                                <i class="fas fa-truck"></i><p style="font-size: 13px">Order before 5PM today to receive by tomorrow</p>
+                            </div>
+    
+                            <div id='quick_buttons'>
+                                <button id="minus">-</button>
+                                <span id="number">1</span>
+                                <button id="plus">+</button>
+                                <div class="cart_btn">
+                                    <button id="add_to_cart_button">Add to cart</button>
+                                </div>
+                                <a href="pie.html">
+                                    <button id="view_more">More information</button>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <div class="imgg_q">
+                            <img class='quick_img' id = 'image' src='img/cherry_pie.jpg'>
+                            <span class="img_q">
+                                <img class="small_img" src="img/cherry_pie_slice.jpg">
+                                <img class="small_img1" src="img/Cherry-Pie3.jpg">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
         <!-- Menu page -->
         <section id='menu'>
             <h1>Our Signatures</h1>
@@ -74,7 +132,7 @@
                             <img class='image-hover' src='img/cherry_pie_slice.jpg' title="Pecan in the sky | Pecan Pie">
                         </a>
                         <div class="view">
-                            <button class="quick">Quick view</button>
+                            <button class="quick" onclick="check()">Quick view</button>
                         </div>
                     </div>
                     <div class='cost'>
@@ -156,7 +214,8 @@
 
 
 
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/78faa4f6df.js" crossorigin="anonymous"></script>
         <script src="script.js"></script>
     </body>
