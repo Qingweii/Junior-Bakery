@@ -442,7 +442,7 @@ input[type='date']{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-#close_q{
+#close_q, #close_q1{
     display: flex;
     justify-content: center;
     margin:  0 0 20px auto;
@@ -457,7 +457,7 @@ input[type='date']{
     cursor: pointer;
 }
 
-#close_q:hover{
+#close_q:hover, #close_q1:hover{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -560,7 +560,7 @@ input[type='date']{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.quick{
+.quick, .quick1, .quick2{
     display: none;
     position: absolute;
     z-index: 1;
@@ -578,13 +578,21 @@ input[type='date']{
     cursor: pointer;
 }
 
-.quick:hover{
+.quick:hover, .quick1:hover, .quick2:hover{
     background-color: rgb(218, 141, 0);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     transition: 0.2s ease-in-out;
 }
 
 .pastry:hover .quick{
+    display: block;
+}
+
+.pastry:hover .quick1{
+    display: block;
+}
+
+.pastry:hover .quick2{
     display: block;
 }
 

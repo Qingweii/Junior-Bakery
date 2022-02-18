@@ -28,7 +28,7 @@ $('.quick').click(function(){
 
 $('#close_q').click(function(){
     document.getElementById('qck_container').style.display = 'none';
-    $('#overlay').remove();   // remove overlay after cancel button
+    $('#overlay').remove();   // remove overlay after cancel btn
 })
 
 // to darken the background upon quick view button
@@ -37,8 +37,6 @@ function check(){
         id:"overlay"
     }).appendTo("body");  // append overlay to body
 }
-
-
 
 // Toggle button between 6-inch and 10-inch cake
 var cost_pastry = document.getElementById('price_pastry');
@@ -97,6 +95,7 @@ plusbtn.onclick = function(){
     }
 };
 
+
 // Add to cart page
 $(document).ready(function(){
     
@@ -152,6 +151,7 @@ $(document).ready(function(){
 });
 
 
+
 // Carousel (Viewing Pastry)
 let slidePosition = 0;
 const slide = document.getElementsByClassName('image');
@@ -197,5 +197,4 @@ function movetoPrevSlide(){
 
     updateSlidePosition();
 };
-
 
