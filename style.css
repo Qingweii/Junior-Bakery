@@ -93,6 +93,7 @@ input[type='password']{
 
 .header_bar{
     padding-top: 30px;
+    padding-bottom: 70px;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -111,7 +112,7 @@ input[type='password']{
     text-align: center;
     position: absolute;
     z-index: 1;
-    left: 10%;
+    left: 20%;
     font-size: 16px;
 }
 
@@ -125,13 +126,24 @@ input[type='password']{
     to {opacity: 1;}
 }
 
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+
+.name{
+    position: absolute;
+}
+
 
 .header{
     overflow: hidden;
-    z-index: 2;
     position: fixed;
+    z-index: 2;
     width: 100%;
-    background-color: rgb(230, 204, 176);
+    height: 26%;
+    background-color: rgb(255, 231, 196);
 }
 
 .header .cart{
@@ -150,13 +162,13 @@ input[type='password']{
 .navigation ul{
     display: flex;
     justify-content: space-evenly;
-    padding-top: 40px;
     flex-wrap: nowrap;
     list-style-type: none;
     font-size: 18px;
     font-weight: bold;
-    
+    padding: 0;
 }
+
 
 .navigation .bar a{
     text-decoration: none;
@@ -407,6 +419,7 @@ input[type='date']{
     font-weight: bold;
     font-size: 18px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .quick:hover{
