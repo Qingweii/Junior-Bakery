@@ -431,10 +431,34 @@ input[type='date']{
 
 .menu_list{
     padding-top: 50px;
+    padding-bottom: 80px;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.upcoming_menu{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 150px;
+    padding-top: 50px;
+}
+
+.lauching_soon{
+    padding-top: 20px;
+}
+
+.lauching_soon h1{
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.upcoming_menu img{
+    border-radius: 10px;
 }
 
 .menu_list img{
@@ -652,6 +676,35 @@ input[type='date']{
     cursor: pointer;
 }
 
+.upcmg{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(230, 164, 43);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.upcmg:hover{
+    background-color: rgb(218, 141, 0);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.3s ease-in-out;
+}
+
+.pastry_up:hover .upcmg{
+    display: block;
+}
+
+
 .quick:hover, .quick1:hover, .quick2:hover{
     background-color: rgb(218, 141, 0);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -677,6 +730,10 @@ input[type='date']{
     padding-top: 150px;
 }
 
+.pastry_up .view{
+    padding-left: 100px;
+}
+
 .menu1{
     padding-right: 40px;
 }
@@ -688,6 +745,20 @@ input[type='date']{
 .menu3{
     padding-right: 80px;
 }
+
+.up_menu1{
+    padding-right: 140px;
+    padding-left: 0;
+}
+
+.up_menu2{
+    padding-right: 140px;
+}
+
+.up_menu3{
+    padding-right: 70px;
+}
+
 
 .pastry .image-main{
     width: 350px;
@@ -714,13 +785,28 @@ input[type='date']{
 }
 
 
+.pastry_up .image-main{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    filter: brightness(85%);
+}
+
+.pastry_up .image-main:hover{
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
 .cost{
     padding-top: 220px;
     font-size: 15px;
 }
 
 .show_container{
-    padding-top: 200px;
+    padding-top: 300px;
 }
 
 .show_container h1{
