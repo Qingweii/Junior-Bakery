@@ -86,11 +86,15 @@ $('.toggle_button').click(function(){
     
             ppl = ' ' + 'For Group of 8-12'
             $('#people').html(ppl)
+            $('#type_pastry').html('6-inch')
+
         } else{
             cost_pastry.innerText = '$69.00';
     
             ppl = ' ' + 'For Group of 12-18'
             $('#people').html(ppl)
+            $('#type_pastry').html('10-inch')
+
         }
     } else if(($(this).text() == '4-pieces') || ($(this).text() == '8-pieces')){
         if($(this).text() == '4-pieces'){
@@ -98,11 +102,15 @@ $('.toggle_button').click(function(){
     
             ppl = ' ' + 'For Group of 1-4'
             $('#people').html(ppl)
+            $('#type_pastry').html('4-pieces')
+
         } else{
             cost_pastry.innerText = '$40.00';
     
             ppl = ' ' + 'For Group of 1-8'
             $('#people').html(ppl)
+
+            $('#type_pastry').html('8-pieces')
         }
     }
 });
@@ -215,7 +223,7 @@ $(document).ready(function(){
         let pastryImg = document.getElementById('image').getAttribute('src');
         let pastryPrice = Number(cost) * Number(pastryNum);
         let origPrice = document.getElementById('price_pastry').innerText.replace('$','');
-        
+        let pastryType = document.getElementById('type_pastry').innerText;
 
         // Get pastry info when user click add to cart
         let jsondata = {
@@ -224,6 +232,7 @@ $(document).ready(function(){
             'price': pastryPrice,
             'quantity': pastryNum,
             'orig': origPrice,
+            'type': pastryType,
         };
 
         // Create AJAX settings

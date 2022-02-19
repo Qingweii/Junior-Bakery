@@ -981,6 +981,12 @@ input[type='date']{
     padding-top: 280px;
 }
 
+#type_pastry{
+    display: flex;
+    justify-content: flex-end;
+    font-style: italic;
+}
+
 #minus, #plus{
     width: 35px;
     height: 50px;

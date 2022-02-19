@@ -196,7 +196,7 @@ $(document).ready(function(){
 
         for (var i = 0; i <response.length; i ++){
 
-            order = `${order}<tr id='${response[i]._id}'><td><img src = '${response[i].image}' width = '140' height = '150' style='object-fit: cover;'></td><td>${response[i].name}<br>$${response[i].orig}</td><td id='cost'>$${response[i].price}</td>
+            order = `${order}<tr id='${response[i]._id}'><td><img src = '${response[i].image}' width = '140' height = '150' style='object-fit: cover;'></td><td>${response[i].name}<br>$${response[i].orig}<br>${response[i].type}</td><td id='cost'>$${response[i].price}</td>
             <td id='quantity'><button id="minus_q" data-quantity='${response[i].quantity}' data-id='${response[i]._id}' data-orig='${response[i].orig}'>-</button><div id = 'quantity_element'>${response[i].quantity}</div><button id="plus_q" data-quantity='${response[i].quantity}' data-id='${response[i]._id}' data-orig='${response[i].orig}'>+</button></td>
             <td><a href='#delete-container' class='delete' data-id='${response[i]._id}' data-cost='${response[i].price}'><i class="fas fa-times fa-2x" style='color: red;'></i></a></td></tr>`;
 
