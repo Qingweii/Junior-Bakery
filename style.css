@@ -650,20 +650,30 @@ input[type='date']{
     padding-top: 200px;
 }
 
+.show_container h1{
+    padding-bottom: 20px;
+}
 
 .container_slide{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.mySlides{
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .Slides{
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
     background-color: #ffffff;
     border: none;
+    width: 50%;
 }
 
 .Slides p{
@@ -702,7 +712,26 @@ input[type='date']{
 
 .active {
     background-color: #717171;
-  }  
+}  
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 4s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+}
+  
 
 
 
@@ -1529,7 +1558,6 @@ input[type='date']{
 
 #choose_box{
     background-color: none;
-    border: 2px solid rgb(202, 160, 105);
     outline: none;
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -1537,7 +1565,6 @@ input[type='date']{
 
 .textarea1{
     background-color: none;
-    border: 2px solid rgb(202, 160, 105);
     outline: none;
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -1677,8 +1704,221 @@ input[type='date']{
 
 
 /* Media Queries */
-@media (max-width: 428px) {
-    p {
-        font-size: 1.25rem;
+@media (max-width: 550px) {
+    .login_page{
+        font-size: 18px;
+    }
+    .username_container, .email_container, .password_container, .buttons{
+        padding: 0 30px;
+        padding-top: 30px;;
+    }
+    .textarea{
+        width: 150%;
+        align-content: center;
+    }
+    .header{
+        position: fixed;
+        width: 38%;
+    }
+    .header_bar {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .navigation ul{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 40px;
+        font-size: small;
+    }
+    #topic{
+        padding-bottom: 50px;
+        width:76%;
+        padding-right: 50px;
+    }
+    .comment1,.comment2,.comment3,.comment4{
+        padding-bottom: 50px;
+        width:76%;
+        padding-left: 10px;
+    }
+    .comment_container{
+        padding-top: 80px;
+        width: 100%;
+        padding-left: 150px;
+    }
+    .comment{
+        width: 100%;
+        padding-bottom: 30px;
+        padding-left: 0px;
+    }
+    .platform_box{
+        padding-left: 0px;
+        padding-bottom: 50px;
+    }
+    .last{
+        display: flex;
+        flex-direction: column;
+    }
+    #join{
+        width: 150px;
+        height: 400px;
+        object-fit: cover;
+        margin-left: 20px;
+    } 
+    .info_pie .image img{
+        width: 100px;
+        height: 200px;
+        object-fit: cover;
+        padding-top: 200px;
+        padding-left: 50px;
+    }
+    .carousel_actions{
+        display: flex;
+        justify-content: space-between;
+        top: 70%;
+        position: absolute;
+        width: 48%;
+    }
+    .information{
+        padding-top: 100px;
+        padding-left: 200px;
+        position: absolute;
+    }
+    #name_pastry{
+        font-size: 10px;
+    }
+    #price_pastry{
+        padding-left: 150px;
+        font-size: 20px;
+    }
+    #description_pastry{
+        padding-top: 80px;
+        padding-right: 40px;
+    }
+    
+    #quantity_pastry{
+        padding-top:100px;
+    }
+    
+    #minus, #plus{
+        width: 35px;
+        height: 50px;
+        cursor: pointer;
+    }
+    
+    #number{
+        padding: 20px 20px;
+    }
+    
+    #cart_pastry{
+        padding-top: 80px;
+        padding-left: 80px;
+    }
+    
+    #add_to_cart_button{
+        width: 100px;
+        height: 50px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    #expect_pastry{
+        padding-top: 500px;
+    }
+    
+    #toggle_pastry{
+        padding-top: 100px;
+        padding-left: 30px;
+    }
+    .icons p{
+        padding-left: 20px;
+    }
+    
+    #reviews{
+        flex-basis: auto;
+        padding-top:200px;
+        padding-bottom: 100px;
+    }
+    .moto h1{
+        text-align: center;
+        font-size: 30px;
+        padding-top: 50%;
+        font-weight: bolder;
+    }
+    .moto .arrow_down{
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    #intro_page{
+        padding-top: 1300px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+    }
+    
+    .short_intro{
+        margin-left: 150px;
+        margin-right: 50px;
+        margin-top: 50px;
+        position: absolute;
+    }
+    
+    #intro_page img{
+        width: 150px;
+        height: 250px;
+        object-fit: cover;
+        margin-top: 200px;
+        border-radius: 20px;
+    }
+    
+    #choose_us h1{
+        text-align: center;
+    }
+    
+    .example{
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .commentbox1{
+        display: flex;
+        justify-content: center;
+        padding-right: 0px;
+    }
+    
+    .commentbox2{
+        padding-left: 0px;
+    }
+    
+    .commentbox3{
+        display: flex;
+        justify-content: center;
+        padding-left: 100px;
+        padding-right: 60px;
+    }
+    
+    
+    .commentbox h3{
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    .commentbox{
+        width: 400px;
+        border-radius: 10px;
+        border: 2px solid black;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        padding: 20px 20px;
+        font-size: 16px;
+    }
+  
+    .card_info{
+        justify-content: center;
+        margin-left: 3%;
+        margin-top: 3%;
     }
 }
