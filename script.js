@@ -57,26 +57,108 @@ $('.toggle_button').click(function(){
 });
 
 
-// Slides show for review
-var slideIndex = 0;
-showSlides();
+$(function(){
+    if($('body').is('.pie_car')){
+        // Carousel (Viewing Pastry)
+        let slidePosition = 0;
+        const slide = document.getElementsByClassName('image');
+        const totalSlide = slide.length;
 
-function showSlides() {
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for ( var i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000);                          // to change to different slides every 2 seconds
-}
+        document.getElementById('next').addEventListener('click',function(){
+            movetoNextSlide();
+        });
 
+        document.getElementById('prev').addEventListener('click',function(){
+            movetoPrevSlide();
+        });
+
+        function updateSlidePosition(){
+            
+            for (let move of slide){
+                move.classList.remove('image--visible');
+                move.classList.add('image--hidden');
+            }
+
+            slide[slidePosition].classList.add('image--visible');
+        }
+
+
+        function movetoNextSlide() {
+
+            if (slidePosition === totalSlide -1){
+                slidePosition = 0;
+            } else{
+                slidePosition++;
+            }
+
+            updateSlidePosition();
+        };
+
+        function movetoPrevSlide(){
+
+            if (slidePosition === 0){
+                slidePosition = totalSlide -1;
+            } else{
+                slidePosition--;
+            }
+
+            updateSlidePosition();
+        };
+
+    }
+})
+
+
+$(function(){
+    if($('body').is('.cake_car')){
+        // Carousel (Viewing Pastry)
+        let slidePosition = 0;
+        const slide = document.getElementsByClassName('image');
+        const totalSlide = slide.length;
+
+        document.getElementById('next').addEventListener('click',function(){
+            movetoNextSlide();
+        });
+
+        document.getElementById('prev').addEventListener('click',function(){
+            movetoPrevSlide();
+        });
+
+        function updateSlidePosition(){
+            
+            for (let move of slide){
+                move.classList.remove('image--visible');
+                move.classList.add('image--hidden');
+            }
+
+            slide[slidePosition].classList.add('image--visible');
+        }
+
+
+        function movetoNextSlide() {
+
+            if (slidePosition === totalSlide -1){
+                slidePosition = 0;
+            } else{
+                slidePosition++;
+            }
+
+            updateSlidePosition();
+        };
+
+        function movetoPrevSlide(){
+
+            if (slidePosition === 0){
+                slidePosition = totalSlide -1;
+            } else{
+                slidePosition--;
+            }
+
+            updateSlidePosition();
+        };
+
+    }
+})
 
 
 //Plus and Minus button for quantity value (Add to cart page)
@@ -172,50 +254,24 @@ $(document).ready(function(){
 });
 
 
+// Slides show for review
+var slideIndex = 0;
+showSlides();
 
-// Carousel (Viewing Pastry)
-let slidePosition = 0;
-const slide = document.getElementsByClassName('image');
-const totalSlide = slide.length;
-
-document.getElementById('next').addEventListener('click',function(){
-    movetoNextSlide();
-});
-
-document.getElementById('prev').addEventListener('click',function(){
-    movetoPrevSlide();
-});
-
-function updateSlidePosition(){
-    
-    for (let move of slide){
-        move.classList.remove('image--visible');
-        move.classList.add('image--hidden');
-    }
-
-    slide[slidePosition].classList.add('image--visible');
+function showSlides() {
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for ( var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000);                          // to change to different slides every 2 seconds
 }
 
-
-function movetoNextSlide() {
-
-    if (slidePosition === totalSlide -1){
-        slidePosition = 0;
-    } else{
-        slidePosition++;
-    }
-
-    updateSlidePosition();
-};
-
-function movetoPrevSlide(){
-
-    if (slidePosition === 0){
-        slidePosition = totalSlide -1;
-    } else{
-        slidePosition--;
-    }
-
-    updateSlidePosition();
-};
 
