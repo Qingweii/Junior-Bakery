@@ -35,9 +35,20 @@ $('.quick').click(function(){
     document.getElementById('qck_container').style.display = 'block';
 })
 
+$('.quick1').click(function(){
+    document.getElementById('qck_container1').style.display = 'block';
+})
+
+// Remove page upon clicking cross (x) button
+
 $('#close_q').click(function(){
     document.getElementById('qck_container').style.display = 'none';
-    $('#overlay').remove();   // remove overlay after cancel btn
+    $('#overlay').remove();   // remove overlay effect after cancel btn
+})
+
+$('#close_q1').click(function(){
+    document.getElementById('qck_container1').style.display = 'none';
+    $('#overlay').remove();   // remove overlay effect after cancel btn
 })
 
 $('#close_l').click(function(){

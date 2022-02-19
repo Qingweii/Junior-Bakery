@@ -619,11 +619,13 @@ input[type='date']{
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
+    color:rgb(255, 0, 55);
 }
 
 
 .review_love p{
     padding-left:10px;
+    color: #000000;
 }
 
 
