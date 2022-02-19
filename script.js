@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
         $('#msg_launched_container').fadeIn()
     }
 
-    setTimeout(open, 1000)
+    setTimeout(open, 3000)
 });
 
 

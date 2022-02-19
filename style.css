@@ -390,8 +390,31 @@ input[type='date']{
     padding-top: 120px;
 }
 
+.follow{
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-left: 0;
+}
 
+.follow p{
+    margin-bottom: 0;
+}
 
+.follow_icons{
+    flex-direction: row;
+}
+
+.ig, .facebook, .twitter{
+    padding-top: 0;
+    padding-right: 30px;
+    color: rgb(248, 232, 202);
+}
+
+.ig:hover, .facebook:hover, .twitter:hover{
+    transition: 0.2s ease-in-out;
+    color: rgb(252, 219, 159);
+}
 
 
 /* Menu page */
