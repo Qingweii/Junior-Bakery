@@ -170,6 +170,57 @@
                 </div>
             </div>
         </div>
+
+        <!-- Cupcake quick view -->
+        <div id="qck_container2" style="display:none">
+            <div id="quick_popup">
+                <div id="quick_view_container">
+                    <div class="quick_info">
+                        <button id="close_q2">&times;</button>
+    
+                        <div class="simple_info">
+                            <h2 id='name_pastry'><strong style="font-style: italic">[NEW] Lychee Moogo</strong></h2>
+                            <strong>- Cupcakes -</strong>
+    
+                            <div class="stock">
+                                <h1 id='price_pastry' style="font-size: 26px">From $33.00</h1>
+                                <p class="in"><i class="fas fa-check fa-1x" style="color: green; font-size: 22px;"></i> In stock</p>
+                            </div>
+    
+                            <div class="review_love">
+                                <i class="fas fa-heart" class="love"></i>
+                                <i class="fas fa-heart" class="love"></i>
+                                <i class="fas fa-heart" class="love"></i>
+                                <i class="fas fa-heart" class="love"></i>
+                                <p>(389)</p>
+                            </div>
+
+                            <div class="icon_s" style="padding-top: 40px;">
+                                <i class="fa-solid fa-cake-candles"></i><p style="font-size: 15px; padding-left: 26px;"> From Group of 1-4 </p>
+                            </div>
+    
+                            <div class="icon_s">
+                                <i class="fas fa-truck"></i><p style="font-size: 15px">Order before 5PM today to receive by tomorrow</p>
+                            </div>
+    
+                            <div id='quick_buttons'>
+                                <a href="cupcake.html">
+                                    <button id="view_more">More information</button>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <div class="imgg_q">
+                            <img class='quick_img' id = 'image' src='img/cupcake.jpg' title="Lychee Moogo | Cupcakes">
+                            <span class="img_q">
+                                <img class="small_img" src="img/cupcake_open.jpg">
+                                <img class="small_img1" src="img/cupcake_slice.jpg">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
 
         <!-- Menu page -->
@@ -213,11 +264,13 @@
         
                 <div class='menu3'>
                     <div class='pastry'>
-                        <img class='image-main' src='img/cupcake.jpg'>
-                        <img class='image-hover' src='img/cupcake_slice.jpg' title="Lychee moogo | Mango cupcakes">
+                        <a href="cupcake.html">
+                            <img class='image-main' src='img/cupcake.jpg'>
+                            <img class='image-hover' src='img/cupcake_slice.jpg' title="Lychee moogo | Mango cupcakes">
+                        </a>
 
                         <div class="view">
-                            <button class="quick2">Quick view</button>
+                            <button class="quick2" onclick="check()">Quick view</button>
                         </div>
                     </div>
                     <div class='cost'>

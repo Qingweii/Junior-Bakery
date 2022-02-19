@@ -539,7 +539,7 @@ input[type='date']{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-#close_q, #close_q1{
+#close_q, #close_q1, #close_q2{
     display: flex;
     justify-content: center;
     margin:  0 0 20px auto;
@@ -554,7 +554,7 @@ input[type='date']{
     cursor: pointer;
 }
 
-#close_q:hover, #close_q1:hover{
+#close_q:hover, #close_q1:hover, #close_q2:hover{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -1083,18 +1083,18 @@ input[type='date']{
 
 .review{
     width: 300px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     background-color: #ffffff;
-    border: 2px solid rgb(202, 160, 105);
+    border: none;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 
 .review .love{
-    padding-top: 40px
+    padding-top: 40px;
 }
 
 .review h3{
@@ -1110,6 +1110,9 @@ input[type='date']{
 .review p{
     width: 100%;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 16px;
 }
 
 

@@ -39,6 +39,12 @@ $('.quick1').click(function(){
     document.getElementById('qck_container1').style.display = 'block';
 })
 
+$('.quick2').click(function(){
+    document.getElementById('qck_container2').style.display = 'block';
+})
+
+
+
 // Remove page upon clicking cross (x) button
 
 $('#close_q').click(function(){
@@ -50,6 +56,12 @@ $('#close_q1').click(function(){
     document.getElementById('qck_container1').style.display = 'none';
     $('#overlay').remove();   // remove overlay effect after cancel btn
 })
+
+$('#close_q2').click(function(){
+    document.getElementById('qck_container2').style.display = 'none';
+    $('#overlay').remove();   // remove overlay effect after cancel btn
+})
+
 
 $('#close_l').click(function(){
     document.getElementById('msg_launched_container').style.display = 'none';
@@ -67,74 +79,38 @@ function check(){
 var cost_pastry = document.getElementById('price_pastry');
 
 $('.toggle_button').click(function(){
-    if($(this).text() == '6-inch'){
-        cost_pastry.innerText = '$58.00';
 
-        ppl = ' ' + 'For Group of 8-12'
-        $('#people').html(ppl)
-    } else{
-        cost_pastry.innerText = '$69.00';
-
-        ppl = ' ' + 'For Group of 12-18'
-        $('#people').html(ppl)
+    if(($(this).text() == '6-inch') || ($(this).text() == '10-inch')){
+        if($(this).text() == '6-inch'){
+            cost_pastry.innerText = '$58.00';
+    
+            ppl = ' ' + 'For Group of 8-12'
+            $('#people').html(ppl)
+        } else{
+            cost_pastry.innerText = '$69.00';
+    
+            ppl = ' ' + 'For Group of 12-18'
+            $('#people').html(ppl)
+        }
+    } else if(($(this).text() == '4-pieces') || ($(this).text() == '8-pieces')){
+        if($(this).text() == '4-pieces'){
+            cost_pastry.innerText = '$33.00';
+    
+            ppl = ' ' + 'For Group of 1-4'
+            $('#people').html(ppl)
+        } else{
+            cost_pastry.innerText = '$40.00';
+    
+            ppl = ' ' + 'For Group of 1-8'
+            $('#people').html(ppl)
+        }
     }
 });
 
 
-$(function(){
-    if($('body').is('.pie_car')){
-        // Carousel (Viewing Pastry)
-        let slidePosition = 0;
-        const slide = document.getElementsByClassName('image');
-        const totalSlide = slide.length;
-
-        document.getElementById('next').addEventListener('click',function(){
-            movetoNextSlide();
-        });
-
-        document.getElementById('prev').addEventListener('click',function(){
-            movetoPrevSlide();
-        });
-
-        function updateSlidePosition(){
-            
-            for (let move of slide){
-                move.classList.remove('image--visible');
-                move.classList.add('image--hidden');
-            }
-
-            slide[slidePosition].classList.add('image--visible');
-        }
-
-
-        function movetoNextSlide() {
-
-            if (slidePosition === totalSlide -1){
-                slidePosition = 0;
-            } else{
-                slidePosition++;
-            }
-
-            updateSlidePosition();
-        };
-
-        function movetoPrevSlide(){
-
-            if (slidePosition === 0){
-                slidePosition = totalSlide -1;
-            } else{
-                slidePosition--;
-            }
-
-            updateSlidePosition();
-        };
-
-    }
-})
-
 
 $(function(){
-    if($('body').is('.cake_car')){
+    if($('body').is('.pie_car, .cup_car, .cake_car')){
         // Carousel (Viewing Pastry)
         let slidePosition = 0;
         const slide = document.getElementsByClassName('image');
