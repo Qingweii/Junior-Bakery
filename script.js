@@ -6,6 +6,15 @@ function showHome(){
     document.getElementById('about_us_page').style.display = 'block';
 };
 
+// Popup message for newly lauched product
+window.addEventListener("load", function(){
+    function open(){
+        $('#msg_launched_container').fadeIn()
+    }
+
+    setTimeout(open, 1000)
+});
+
 
 // Popup message at navigation bar
 function popupFunction(){
@@ -29,6 +38,10 @@ $('.quick').click(function(){
 $('#close_q').click(function(){
     document.getElementById('qck_container').style.display = 'none';
     $('#overlay').remove();   // remove overlay after cancel btn
+})
+
+$('#close_l').click(function(){
+    document.getElementById('msg_launched_container').style.display = 'none';
 })
 
 // to darken the background upon quick view button

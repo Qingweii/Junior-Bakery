@@ -422,6 +422,49 @@ input[type='date']{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
+#launched{
+    display: flex;
+    justify-content: center;
+}
+
+#msg_launched_container{
+    display: none;
+    position: absolute;
+    position: fixed;
+    text-align: center;
+    top: 10%;
+    z-index: 4;
+    background-color: #ffffff;
+    border: 3px solid rgb(255, 145, 0);
+    width: 350px;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#close_l{
+    justify-content: flex-end;
+    padding-left: 280px;
+    background-color: transparent;
+    font-size: 40px;
+    color: #000000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#msg_launched_container img{
+    width: 300px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.launched_info p{
+    font-size: 14px;
+    padding-top: 20px;
+}
+
 #overlay{
     width:100%;
     height:100%;
