@@ -4,9 +4,9 @@ function popupFunction(){
     pop.classList.toggle('show');
 }
 
-// Updating current points to every page (store data and getting data)
+// Getting/updating current points to every page (store data and getting data using Local Storage)
 var new_points = Number(localStorage.getItem('points'));
-$('#pp').html(new_points)
+$('#pp').html(new_points);
 
 
 // Footer section (birthday submission)
@@ -57,6 +57,7 @@ function ans(){
     alert('Your answer has been sent. You will be notified via email if you made it to the Top 3. Good Luck!');
     $('#submit_btn').prop('disabled',true);
 
+    // Updating/setting current points to local storage
     localStorage.setItem('points',total);
     localStorage.setItem('points',JSON.stringify(total));
 
@@ -114,6 +115,7 @@ function getInput(){
     $('.rightt').html(you);
     $('#pp').html(total)
 
+    // Updating/Setting current points to LocalStorage
     localStorage.setItem('points',total);
     localStorage.setItem('points',JSON.stringify(total));
 }
