@@ -6,6 +6,11 @@ function showHome(){
     document.getElementById('about_us_page').style.display = 'block';
 };
 
+// Updating current points to every page (store data and getting data)
+var new_points = Number(localStorage.getItem('points'));
+$('#pp').html(new_points);
+
+
 // Popup message for newly lauched product
 window.addEventListener("load", function(){
     function open(){

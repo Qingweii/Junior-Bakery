@@ -4,6 +4,10 @@ function popupFunction(){
     pop.classList.toggle('show');
 }
 
+// Updating current points to every page (store data and getting data)
+var new_points = Number(localStorage.getItem('points'));
+$('#pp').html(new_points)
+
 
 // Footer section (birthday submission)
 function bday(){
@@ -51,12 +55,18 @@ function random_generator(){
 // Submission of answer for Quest
 function ans(){
     alert('Your answer has been sent. You will be notified via email if you made it to the Top 3. Good Luck!');
+    $('#submit_btn').prop('disabled',true);
+
+    localStorage.setItem('points',total);
+    localStorage.setItem('points',JSON.stringify(total));
+
     return false;
 }
 
 
 // Submission of answer for Q&A
 function share(){
+
     return false;
 }
 
@@ -76,18 +86,20 @@ function timecompleted(minutes, seconds){
     var sec_left = 60 - Number(seconds);              // to find the seconds upon clicking the submit button
     var item = document.getElementById('pastry_name').innerHTML;
     var count = document.getElementById('pp').innerText;
-    total = Number(count) + 50;   // Update points when user comment on Q&A
+    total = Number(count) + 50;   // Update points when user submit answer for the quest
 
     var y = 'Time completed' + ':' + " " + min_left + " " + 'mins' + " " + sec_left + " " +'secs';
     var c = 'Item' + ':' + " " + '"'+ item +'"';
 
-    $('#submit_btn').click(function(){
-        $(this).data('clicked',true);
+    $('#submit_btn').on('click', function(){
         $('.completion').html(y);                   // to print out the time taken
-        $('.item').html(c);                      // to print out the initial item they have generated
-        $('#pp').html(total)
+        $('.item').html(c);                        // to print out the initial item they have generated
+        $('#pp').html(total);
+
     })
+
     return false;
+
 }
 
 
@@ -101,6 +113,9 @@ function getInput(){
     $('#your_comment').html(comment);
     $('.rightt').html(you);
     $('#pp').html(total)
+
+    localStorage.setItem('points',total);
+    localStorage.setItem('points',JSON.stringify(total));
 }
 
 
@@ -438,7 +453,7 @@ $(document).ready(function(){
         });
 
     }
-
+    // Select a card and the other cards will turn grey
     $('.cards .radio').click(function(){
         $('.radio').addClass('grey');
         $(this).removeClass('grey');

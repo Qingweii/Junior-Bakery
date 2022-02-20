@@ -84,8 +84,8 @@ input[type='password']{
 /* Loading page */
 #loading{
     position: absolute;
-    left: 35%;
-    top: 15%;
+    left: 18%;
+    top: 0%;
 }
 
 
@@ -103,12 +103,11 @@ input[type='password']{
 
 .header_bar{
     padding-top: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 62px;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
     cursor: pointer;
-
 }
 
 /* Pop up message */
@@ -116,14 +115,15 @@ input[type='password']{
     visibility: hidden;
     width: 135px;
     padding: 8px 0;
-    background-color: rgb(71, 53, 25);
-    color: rgb(255, 242, 232);
+    background-color: rgb(255, 157, 0);
+    color: rgb(0, 0, 0);
     border-radius: 4px;
     text-align: center;
     position: absolute;
     z-index: 1;
     left: 20%;
     font-size: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .popup_message .show{
@@ -152,8 +152,8 @@ input[type='password']{
     position: fixed;
     z-index: 2;
     width: 100%;
-    height: 26%;
-    background-color: rgb(255, 226, 189);
+    height: 24%;
+    background-color: rgb(255, 230, 177);
 }
 
 .header .cart{
@@ -161,11 +161,11 @@ input[type='password']{
 }
 
 .header .point:hover{
-    color: #684545;
+    color: #ff8c00;
 }
 
 .header .cart:hover{
-    color: #684545;
+    color: #ff8c00;
 }
 
 
@@ -186,7 +186,7 @@ input[type='password']{
 }
 
 .navigation .bar a:hover{
-    color: #684545;
+    color: #ff8c00;
 }
 
 .moto h1{
@@ -212,7 +212,7 @@ input[type='password']{
 }
 
 .moto .arrow_down:hover{
-    color: #684545;
+    color: white;
 }
 
 
@@ -1451,7 +1451,7 @@ input[type='date']{
     padding-bottom: 30px;
     width: 100%;
     border-radius: 20px;
-    background-color: rgb(248, 232, 202);
+    background-color: rgb(255, 247, 233);
     text-align: center;
     color: #4e2819;
     font-weight: bold;
@@ -1466,11 +1466,16 @@ input[type='date']{
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgb(248, 232, 202);
+    background-color: rgb(255, 247, 233);
     color: #4e2819;
     border-radius: 10px;
     font-weight: bold;
     font-size: 18px;
+}
+
+#random_btn:hover{
+    background-color: rgb(255, 244, 223);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 
@@ -1511,7 +1516,7 @@ input[type='date']{
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
-    background-color: rgb(248, 232, 202);
+    background-color: rgb(255, 247, 233);
 }
 
 .submit{
@@ -1524,7 +1529,7 @@ input[type='date']{
     outline: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgb(248, 232, 202);
+    background-color: rgb(255, 247, 233);
     color: #4e2819;
     border-radius: 10px;
     font-weight: bold;
@@ -1533,6 +1538,7 @@ input[type='date']{
 }
 
 #submit_btn:hover{
+    background-color: rgb(255, 244, 223);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     transition: 0.2s ease-in-out;
 }
