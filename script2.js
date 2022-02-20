@@ -155,10 +155,14 @@ function link(){
 }
 
 // Add to bookmark 
-function color(){
-    var bookmark = document.getElementById('save');
-    bookmark.style.color = '#4e2819';
-}
+$(function(){
+    if($('body').is('.part_car')){
+        $('#save').click(function(){
+            $(this).toggleClass('change');
+        })
+    }
+});
+
 
 
 // Contact page section (submission of contact form)
