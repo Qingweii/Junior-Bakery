@@ -172,7 +172,6 @@ function submition(){
 }
 
 
-
 // Card Number validation
 function showme(e){
     if (e.value.length > 0){
@@ -188,6 +187,15 @@ function showme(e){
 function payment(){
     alert('Payment Successful. We are preparing your order now :)');
     location.reload();
+
+    // Points after payment done
+    var count = document.getElementById('pp').innerText;
+    total = Number(count) + 50;
+    $('#pp').html(total);
+    
+    // Updating/Setting current points to LocalStorage
+    localStorage.setItem('points',total);
+    localStorage.setItem('points',JSON.stringify(total));
     return false;
 }
 
