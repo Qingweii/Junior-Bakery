@@ -1,14 +1,13 @@
 # Junior's Bakery
 Our project name is called the 'Junior's Bakery' and this will be the website for our first Integrated Project. The aim for this website is to create a simple and clean bakery website that communicates well with customers, with easy navigation flow that supports Ecommerce functionality.
 
+
 # Link to website
+https://qingweii.github.io/Junior-Bakery/
 
 
 # Design Process
-
-
-
-
+References were made from other bakery websites to find out the main features that needs to be implemented in the website. Wireframed was designed and prototype in Adobe XD. Finally, the Finalized Design for this website will be simple and clean so that users get clearer navigation across the pages, and the designs from XD prototype were imported to here to match the overall IP Project.
 
 
 # Features
@@ -43,35 +42,105 @@ To view more detailed information of that product, they can click on the 'More i
 - Contact page: Users can submit their queries through this page by entering their name, select the related topic they want to tell us about and message us. They have to fill in all these fields in order to submit. They also get to see our shop designs based on different outlets, imported from ArtSation. They can also join our team by clicking on the button and it will bring them to another website. Lastly, they get a Google Map of where our outlets are in Singapore, and have a glimpse of how our outlets looks like in real life. 
 
 
-
-
 # Technologies used
+
+- JQuery: to simplify DOM Manipulation and use it for multiple functions
+
+- Ajax & API: to post, update, delete and get data for the Add to cart page
+
+- JSON: to store multiple pastry names and randomly generate it 
+
+- Local Storage: to store and update current points
+
+- Bootstrap: for add to cart page format
+
+- Lottie: for loading page
 
 
 # Testing
+1. Login page:
+- Try and submit form but 404 error appears on GitHub link
+- Try and submit form again but this time using 'get' method and it works but loading page keeps loading
+- Try and submit form again but this time using 'action' to link to home.html and it works
+
+2. Home page:
+- Try to put image on the home page but did not appear at all
+- Try to put image again but this time using position 'absolute' and it works
+
+3. Footer section:
+- Choose date input and enter but the page keeps refreshing
+- Choose date input and this time added preventDefault but it did not work
+- Choose date input and this time added return false to function and it works
+
+4. Shopping cart page:
+- Try to change the image upon hover but did not work
+- Added hover function to CSS and it worked but has a sudden transition
+- Added transition to CSS and now it looks better
+
+- Try to hover and button appears but it did not work
+- Try to add function upon hover but its getting complicated and did not work
+- Try to use '+' in CSS in order to show the images and the button but did not work
+- Try to add '.' in CSS together with image hover and it worked
+
+- Try to remove items off the list but it removes the data from RestDB but not immediately on the html page
+- Added closest('tr').remove() and it worked
+
+5. Add to cart page:
+- Able to store the data to RestDB but did not appear on the cart page
+- Try to use 'get' method but still did not appear on cart page
+- Try to use another Javascript file and apply 'get' ajax method to it and it worked
+
+- Try to think of ways to add/substract quantity after clicking on the '+'/'-' sign
+- After countless tries, the number (quantity) worked whenever user click on the '+'/'-' sign
+- When trying to change the quantity on cart page, it skips number like '3' to '5' after clicking '+' button, vise versa
+- Try to adjust and use querySelector and it worked and even updates to RestDB
 
 
+6. Checkout page:
+- To sync the changes when they change quantity but did not worked
+- Try to create a function to sync the changes but did not worked
+- Realise that I have to do the caculation inside the $.ajax settings in order to sync the changes and it worked
+
+- Try to remove all items upon clicking on the pay button but it removed only the first row
+- Try to add function that goes through all the rows of orders (for var i = 0.....), and it worked upon refresh
+
+7. Participate page ('Mini Quest'):
+- Try to apply function where user get to click only once but did not worked
+- Try to put 'this.onclick=null' onto the html page after the onclick function and it worked
+
+- Try to display time completed by user but it shows an extra minute that is not supposed to be there
+- Using 'Number(startingMinutes-1)' and it worked where it excluded the first minute
+
+- Updating points upon submission of the Quest but it keeps updating every time it is clicked
+- Realise that it has to put under the onclick function and before the 'return false' on the JS file to work
+
+- Updating points to all pages using Local Storage but did not worked
+- Realise that I have to give ID's to all the pages and apply function to the all Javascript files as well
+
+- Wanted to toggle between the save icon but it only changes color after one click and could not change back
+- Added toggelClass to it and it worked
+
+8. Contact Page:
+- Try to not refresh the page upon form submission but did not worked
+- Found out that I have used the same ID's from other pages and after correcting, it worked
 
 
+# Interesting facts learnt
+- I found out that using the same ID on the same page will not worked and it only works for ID that is place first
+- Using different DOM manipulation gives different results (especially querySelector and querySelectorAll) 
+- Giving the body a class name and create functions in Javascript to link specific functions to that class name, works when there are unnecessary functions not required by a certain page when using same Javascript file across the pages (to minimize errors)
 
 
 # Credits
-
 # Content
-- The text for section Y was copied from...
-
-
-
+- Some references for the text on the reviews were from websites 'Cats & the Fiddle' and 'Milkbar'
 
 
 # Media
-- The photos used in this site were obtained from Google photos
-
-
-
+- The photos used in this site were obtained from Google photos.
 
 
 # Acknowledgements
-- We received inspiration for this project from....
+- Inspirations received for this website are websites from 'Cats & the Fiddle' and 'Milkbar'.
 
-- Our individual contributions will be stated on our own ICT Network drive.
+- Our individual contributions for this website will be stated on our own ICT Network drive.
