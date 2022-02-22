@@ -126,6 +126,7 @@ To view more detailed information of that product, they can click on the 'More i
 
 
 # Interesting facts learnt
+- When I was adjusting Media Query, I found out that when I used style on the HTML page, I could not adjust the sizing on the CSS for media query, it will not change
 - I found out that using the same ID on the same page will not worked and it only works for ID that is place first
 - Using different DOM manipulation gives different results (especially querySelector and querySelectorAll) 
 - Giving the body a class name and create functions in Javascript to link specific functions to that class name, works when there are unnecessary functions not required by a certain page when using same Javascript file across the pages (to minimize errors)

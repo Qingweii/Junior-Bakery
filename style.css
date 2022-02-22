@@ -510,6 +510,10 @@ input[type='date']{
     border-radius: 10px;
 }
 
+.launched_info{
+    font-size: 15px;
+}
+
 .launched_info p{
     font-size: 14px;
     padding-top: 20px;
@@ -769,7 +773,7 @@ input[type='date']{
 }
 
 .menu2{
-    padding-left: 55px;
+    padding-left: 73px;
 }
 
 .menu3{
@@ -1565,6 +1569,10 @@ input[type='date']{
     text-align: center;
 }
 
+.platform h4{
+    font-size: 21px;
+}
+
 .right, .rightt{
     float:right;
     padding-right: 200px;
@@ -1833,6 +1841,10 @@ input[type='date']{
     margin-top: 100px;
 }
 
+.place1 h3,p{
+    font-size: 17px;
+}
+
 #model2{
     display:flex;
     flex-direction: row-reverse;
@@ -1843,6 +1855,10 @@ input[type='date']{
 .place2{
     padding-right: 30px;
     margin-top: 100px;
+}
+
+.place2 h3,p{
+    font-size: 17px;
 }
 
 .google_map{
@@ -1992,7 +2008,7 @@ input[type='date']{
     }
 
     .commentbox1, .commentbox2, .commentbox3{
-        width: 50%;
+        width: 79%;
         height: 40vh;
     }
 
@@ -2006,13 +2022,17 @@ input[type='date']{
         font-size: 22px;
     }
 
+    .commentbox2 {
+        padding-left: 306px;
+    }
+
     .commentbox3 p{
         width: 100%;
         font-size: 22px;
     }
 
-    .footer{
-        width: 480%;
+    .footer {
+        width: 482%;
     }
 
     #birthday{
@@ -2033,6 +2053,11 @@ input[type='date']{
     }
 
     /* Shop page */
+    .information {
+        padding-top: 371px;
+        padding-left: 307px;
+    }
+
     #menu{
         padding-top: 100%;
         width: 400%;
@@ -2105,17 +2130,108 @@ input[type='date']{
         width: 50%;
     }
 
-    #expect_pastry{
-        width: 400%;
+    .simple_info {
+        position: absolute;
+        left: 50%;
+        width: 45%;
+        bottom: 35%;
     }
 
-    .carousel_actions{
-        width: 188%;
-        top: 80%;
+    .simple_info #name_pastry{
+        width: 100%;
+        padding-top: 18%;
+    }
+
+    #name_pastry {
+        font-size: 35px;
+        width: 700%;
+        padding-top: 500%;
+    }
+
+    #description_pastry {
+        padding-top: 935px;
+        padding-right: 40px;
+    }
+    
+    #price_pastry {
+        padding-left: 535px;
+        padding-top: 769px;
+        font-size: 60px;
+    }
+    
+
+    #type_pastry {
+        padding-left: 404px;
+        width: 200%;
+        font-size: 50px;
+    }
+
+    #expect_pastry {
+        width: 400%;
+        padding-top: 1173px;
+    }
+
+    #cart_pastry {
+        padding-top: 1478px;
+        padding-left: 274px;
+    }
+
+    #add_to_cart_button {
+        width: 310px;
+        height: 77px;
+        font-size: 30px;
+    }
+
+    #quantity_pastry {
+        padding-top: 1477px;
+        width: 800%;
+    }
+
+    #minus, #plus {
+        width: 35px;
+        height: 58px;
+        font-size: 40px;
+    }
+
+    #number {
+        font-size: 50px;
+    }
+
+    #toggle_pastry {
+        padding-top: 1345px;
+        padding-left: 31px;
+        width: 800%;
+    }
+
+    .toggle_button {
+        width: 277px;
+        height: 73px;
+        font-size: 35px;
+    }
+
+
+    .info_pie .image img {
+        width: 620px;
+        height: 771px;
+        padding-top: 354px;
+        padding-left: 341px;
+    }
+
+    .carousel_actions {
+        width: 210%;
+        top: 125%;
+        left: 100%;
+    }
+
+    .carousel_actions button {
+        width: 47px;
+        height: 69px;
+        font-size: 40px;
     }
 
     #reviews{
         width: 500%;
+        padding-top: 300%;
     }
 
     #reviews h2{
@@ -2127,7 +2243,7 @@ input[type='date']{
     .reviewbox{
         display: flex;
         flex-direction: column;
-        padding-left: 10%;
+        padding-left: 15%;
         padding-top: 30px;
     }
 
@@ -2142,6 +2258,43 @@ input[type='date']{
 
     .mini_quest{
         width: 400%;
+    }
+
+    .comment_container {
+        padding-top: 80px;
+        width: 50%;
+        padding-left: 150px;
+    }
+
+    .platform h4{
+        font-size: 30px;
+    }
+
+    .intro_quest h1, .platform h1{
+        font-size: 40px;
+    }
+
+    .intro_quest h4{
+        font-size: 36px;
+    }
+
+    .ready h2{
+        font-size: 26px;
+    }
+
+    .comment1, .comment2, .comment3{
+        width: 61%;
+    }
+
+    .comment{
+        width: 205%;
+    }
+
+    #topic {
+        padding-bottom: 50px;
+        width: 200%;
+        padding-left: 189px;
+        font-size: 35px;
     }
 
     #qna{
@@ -2165,49 +2318,617 @@ input[type='date']{
     .part p{
         width: 60%;
     }
+
+    .table{
+        width: 300%;
+    }
+
+    .orders {
+        width: 480%;
+        padding-top: 100%;
+        padding-bottom: 320%;
+        padding-left: 0%;
+        font-size: 40px;
+    }
+
+    #cart-total {
+        font-size: 40px;
+        margin-right: 22%;
+    }
+
+    .checkout {
+        padding-left: 17px;
+        padding-right: 14px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: 20%;
+        margin-top: 1%;
+        border-radius: 10px;
+        font-size: 45px;
+    }
+
+    .subtotal_purchase {
+        margin-top: -6%;
+        margin-left: 257%;
+        width: 100%;
+    }
+
+    .cards {
+        padding-top: 23px;
+    }
+
+    .card_info {
+        margin-left: 63%;
+        width: 200%;
+        margin-top: 3%;
+    }
+
+    #checkout_info {
+        width: 480%;
+    }
+
 }
 
 
 @media screen and (min-width: 330px) and (max-width: 768px) {
 
-    .orders{
+    .logo_front {
+        margin-top: 6%;
+        margin-left: 100%;
+    }
+
+    #login h1 {
+        font-size: 30px;
+        width: 248%;
+        margin-left: 42%;
+    }
+
+    .login_page {
+        top: 63%;
+        left: 54%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        font-size: 20px;
+    }
+
+    .username_container, .email_container, .password_container, .buttons {
+        padding: 0 0px;
+        width: 204%;
+        padding-top: 38px;
+        font-size: 16px;
+    }
+
+    .header{
+        height: 10%;
+        font-size: 40px;
+    }
+
+    .navigation .bar{
+        font-size: 35px;
+    }
+
+    .popup_message .popup {
+        width: 320px;
+        z-index: 1;
+        left: 20%;
+        font-size: 30px;
+    }
+
+    #home_page {
+        height: 230vh;
+        width: 400%;
+    }
+
+    #msg_launched_container {
+        top: 7%;
+        left: 29%;
+        width: 1312px;
+        height: 1757px;
+    }
+
+    #msg_launched_container img {
+        width: 794px;
+        margin-top: 1px;
+        margin-right: -17px;
+        height: 908px;
+    }
+
+    #close_l {
+        padding-left: 1036px;
+        font-size: 130px;
+    }
+
+    .launched_info p{
+        font-size: 50px;
+    }
+
+    .launched_info h3{
+        font-size: 60px;
+    }
+
+    #view_product {
+        padding-top: 19px;
+        padding-left: 12px;
+        padding-right: 10px;
+        font-size: 40px;
+        padding-bottom: 18px;
+        font-size: 50px;
+    }
+
+    #intro_page {
+        padding-top: 1485px;
+        width: 392%;
+    }
+
+    #intro_page img {
+        width: 574px;
+        height: 804px;
+        margin-left: 10%;
+    }
+
+    .short_intro {
+        margin-left: 1282px;
+        margin-right: 100px;
+        margin-top: 255px;
         width: 200%;
     }
 
+    .short_intro h1{
+        font-size: 60px;
+    }
+
+    #choose_us {
+        width: 382%;
+    }
+
+    #choose_us h1{
+        font-size: 60px;
+    }
+
+    .example h3{
+        font-size: 50px;
+    }
+
+    #comments h1 {
+        font-size: 60px;
+    }
+
+    #comments{
+        width: 400%;
+    }
+
+    .commentbox{
+        width: 50%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .commentbox h3{
+        font-size: 60px;
+    }
+
+    .commentbox1, .commentbox2, .commentbox3{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+
+    .moto{
+        font-size: 20px;
+    }
+
+    .moto h1{
+        font-size: 60px;
+    }
+
+    .moto h4{
+        font-size: 40px;
+    }
+
+    .orders{
+        width: 400%;
+        padding-top: 50%;
+        padding-bottom: 100%;
+        padding-right: 100%;
+    }
+
+    .orders h2{
+        font-size: 45px;
+    }
+
+    .table {
+        font-size: 40px;
+    }
+
+    #cart-total{
+        padding-left: 200%;
+        font-size: 50px;
+    }
+
+    .checkout{
+        font-size: 50px;
+    }
+
     #preview_page{
-        width: 300%;
+        width: 400%;
         padding-bottom: 50px;
     }
 
     #menu{
-        width: 200%;
-        padding-top: 50%;
-    }
-
-    .mini_quest{
-        width: 200%;
-    }
-
-    #qna{
-        width: 200%;
-    }
-
-    .footer{
-        width: 200%;
-    }
-
-    #contact{
         width: 400%;
         padding-top: 50%;
     }
 
+    #menu h1, .lauching_soon h1, .show_container h1{
+        font-size: 60px;
+    }
+
+    .menu_list{
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .menu1{
+        padding-left: 14%;
+    }
+
+    .menu2{
+        padding-left: 11%;
+    }
+
+    .menu3{
+        width: 14%;
+    }
+
+    #quick_view_container{
+        top:100%;
+        left: 140%;
+        width: 1078px;
+        height: 803px;
+        font-size: 30px;
+    }
+
+    .simple_info #quick_buttons{
+        padding-top: 0px;
+    }
+
+    .information {
+        width: 250%;
+        padding-left: 150%;
+        padding-top: 50%;
+    }
+
+    .simple_info {
+        top: 7%;
+    }
+
+    .simple_info #minus, .simple_info #plus{
+        padding-top: 0px;
+        padding-bottom: 56px;
+        font-size: 50px;
+    }
+
+    .simple_info #add_to_cart_button{
+        width: 409px;
+        height: 66px;
+        font-size: 38px;
+    }
+
+    #name_pastry{
+        font-size: 50px;
+    }
+
+    #description_pastry {
+        padding-top: 190px;
+    }
+
+    #quantity_pastry {
+        padding-top: 529px;
+    }
+
+    #minus, #plus, #number{
+        font-size: 60px;
+        width: 64px;
+        height: 103px;
+    }
+
+    #number {
+        padding: 15px 20px;
+        font-size: 60px;
+    }
+
+    #cart_pastry {
+        padding-top: 547px;
+        padding-left: 364px;
+    }
+
+    #add_to_cart_button {
+        width: 406px;
+        height: 97px;
+        font-size: 45px;
+    }
+
+    #toggle_pastry {
+        padding-top: 419px;
+        padding-left: 30px;
+    }
+
+    .toggle_button {
+        width: 343px;
+        height: 78px;
+        font-size: 50px;
+    }
+
+    #price_pastry {
+        font-size: 60px;
+        padding-left: 62%;
+    }
+
+    #type_pastry {
+        width: 70%;
+        font-size: 40px;
+    }
+
+    #expect_pastry {
+        padding-top: 673px;
+        font-size: 50px;
+    }
+
+    .upcmg{
+        width: 23%;
+    }
+
+    .carousel_actions {
+        top: 120%;
+        width: 100%;
+        left: 35%;
+    }
+
+    .carousel_actions button {
+        width: 61px;
+        height: 96px;
+        font-size: 50px;
+    }
+
+    #reviews {
+        padding-top: 196px;
+        padding-bottom: 228px;
+        width: 400%;
+    }
+
+    #reviews h2{
+        font-size: 50px;
+    }
+
+    .review {
+        width: 737px;
+        height: 839px;
+        font-size: 35px;
+    }
+
+    .review p{
+        font-size: 40px;
+    }
+
+    .info_pie .image img {
+        width: 620px;
+        height: 771px;
+        padding-top: 354px;
+        padding-left: 341px;
+    }
+
+    .cost{
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .intro_quest{
+        font-size: 30px;
+    }
+
+    .intro_quest h1, .platform h1{
+        font-size: 60px;
+    }
+
+    .platform h4{
+        font-size: 40px;
+    }
+
+    .intro_quest h4{
+        font-size: 35px;
+    }
+
+    .ready h2{
+        font-size: 30px;
+    }
+
+    .mini_quest{
+        padding-top: 40%;
+        width: 400%;
+    }
+
+    .intro_quest{
+        font-size: 30px;
+    }
+
+    .intro_quest p{
+        font-size: 30px;
+    }
+
+    #qna{
+        width: 400%;
+        font-size: 30px;
+    }
+
+    .icons_c {
+        padding-left: 20px;
+        padding-right: 469px;
+    }
+
+    .platform_box {
+        padding-left: 445px;
+        padding-bottom: 175px;
+    }
+
+    .footer{
+        width: 400%;
+    }
+
+    .links{
+        padding-left: 180%;
+        font-size: 30px;
+    }
+
+    .bday{
+        font-size: 40px;
+        padding-left: 10%;
+    }
+
+    input[type='date'] {
+        width: 679px;
+        height: 100px;
+    }
+
+    #contact{
+        width: 400%;
+        padding-top: 10%;
+    }
+
+    .contact_intro{
+        font-size: 30px;
+    }
+
+    .contact_intro p{
+        font-size: 30px;
+    }
+
+    .textarea1{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #choose_box{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #model1{
+        padding-left: 20%;
+    }
+
+    #model1 iframe{
+        width: 888px;
+        height: 726px;
+    }
+
+    .place1{
+        font-size: 30px;
+    }
+
+    .place1 h3, p{
+        font-size: 42px;
+    }
+
+    .hours p{
+        font-size: 25px;
+    }
+
+    #model2{
+        padding-right: 20%;
+    }
+
+    #model2 iframe{
+        width: 888px;
+        height: 726px;
+    }
+
+    .place2 h3, p{
+        font-size: 42px;
+    }
+
+    .last{
+        padding-left: 600px;
+    }
+
+    .last img{
+        width: 705px;
+        height: 848px;
+    }
+
     .part{
         width: 270%;
-        padding-top: 50%;
+        padding-top: 20%;
+        padding-left: 70%;
+    }
+
+    .part h1{
+        font-size: 60px;
     }
 
     .part p{
         width: 60%;
+        font-size: 40px;
+    }
+
+    .join_btn{
+        padding-top: 40px;
+        padding-right: 713px;
+    }
+
+    .google_map iframe{
+        width: 2400px;
+        height: 1000px;
+    }
+
+    #checkout_info {
+        width: 400%;
+    }
+
+    .subtotal_purchase {
+        width: 100%;
+        margin-top: -7%;
+        margin-left: 216%;
+    }
+
+    .cards {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        padding-left: 126px;
+        width: 100%;
+    }
+
+    .card_info {
+        margin-left: 61%;
+        width: 150%;
+        margin-top: 3%;
+    }
+}
+
+
+@media screen and (min-width: 1340px) and (max-width: 1440px){
+
+
+    #intro_page {
+        padding-top: 959px;
+        padding-bottom: 130px;
+    }
+
+    .carousel_actions {
+        top: 50%;
+        width: 42%;
+    }
+
+    .info_pie .image img {
+        padding-top: 200px;
+    }
+
+    .last {
+        padding-top: 70px;
+        padding-left: 60px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: row;
     }
 }
 
